@@ -6,7 +6,22 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+      // Used for the title template on pages other than the index site
+      siteTitle: `RR`,
+      // Default title of the page
+      siteTitleAlt: `Roman Rud`,
+      // Can be used for e.g. JSONLD
+      siteHeadline: `Roman Rud Blog`,
+      // Will be used to generate absolute URLs for og:image etc.
+      siteUrl: `https://romanrud.com`,
+      // Used for SEO
+      siteDescription: `Roman Rud Personal Blog`,
+      // Will be set on the <html /> tag
+      siteLanguage: `ru`,
+      // Used for og:image and must be placed inside the `static` folder
+      siteImage: `/banner.jpg`,
+      // Twitter Handle
+      author: `Roman Rud`,
   },
   plugins: [
     {
@@ -15,22 +30,18 @@ module.exports = {
       options: {
         navigation: [
           {
-            title: `Blog`,
+            title: `Блог`,
             slug: `/blog`,
           },
           {
-            title: `About`,
-            slug: `/about`,
+            title: `Книги`,
+            slug: `/books`,
           },
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
-          },
-          {
             name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            url: `https://www.instagram.com/romanruddd/`,
           },
         ],
       },
@@ -69,6 +80,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
+
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
@@ -79,3 +91,4 @@ module.exports = {
     },
   ].filter(Boolean),
 }
+
