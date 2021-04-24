@@ -481,27 +481,6 @@ exports.wrapRootElement = true;
 
 /***/ }),
 
-/***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js":
-/*!********************************************************************************************!*\
-  !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js ***!
-  \********************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _content_posts_fantastic_beasts_and_where_to_find_them_SpotifyPlayer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer */ "./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  SpotifyPlayer: _content_posts_fantastic_beasts_and_where_to_find_them_SpotifyPlayer__WEBPACK_IMPORTED_MODULE_0__["default"],
-  React: react__WEBPACK_IMPORTED_MODULE_1__
-});
-
-/***/ }),
-
 /***/ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js":
 /*!********************************************************************************************!*\
   !*** ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js ***!
@@ -1721,61 +1700,6 @@ function stripPrefix(str, prefix = ``) {
 
   return str;
 }
-
-/***/ }),
-
-/***/ "./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js":
-/*!********************************************************************************!*\
-  !*** ./content/posts/fantastic-beasts-and-where-to-find-them/SpotifyPlayer.js ***!
-  \********************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* eslint react/no-unknown-property: 0 */
-
-/* eslint react/prefer-stateless-function: 0 */
-
-/**
- * Spotify player iframe widget
- *
- * @author Alexander Wallin <office@alexanderwallin.com>
- * @see https://developer.spotify.com/technologies/widgets/spotify-play-button/
- */
- // Size presets, defined by Spotify
-
-const sizePresets = {
-  large: {
-    width: 300,
-    height: 380
-  },
-  compact: {
-    width: 300,
-    height: 80
-  }
-};
-
-function SpotifyPlayer({
-  uri,
-  view,
-  theme,
-  size
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("iframe", {
-    title: "Spotify",
-    className: "SpotifyPlayer",
-    src: `https://embed.spotify.com/?uri=${uri}&view=${view}&theme=${theme}`,
-    width: sizePresets[size].width,
-    height: sizePresets[size].height,
-    frameBorder: "0",
-    allowtransparency: "true"
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (SpotifyPlayer);
 
 /***/ }),
 
@@ -23577,11 +23501,9 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/85add4b20f47a83c98fdb42cecfd26d4.js").default;
+var scope_0 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
 
-var scope_1 = __webpack_require__(/*! ./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js */ "./.cache/caches/gatsby-plugin-mdx/mdx-scopes-dir/e92f8988d65cf25c087d226e6c0ef06f.js").default;
-
-/* harmony default export */ __webpack_exports__["default"] = (Object.assign({}, scope_0, scope_1));
+/* harmony default export */ __webpack_exports__["default"] = (Object.assign({}, scope_0));
 
 /***/ }),
 
