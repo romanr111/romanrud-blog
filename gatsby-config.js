@@ -19,7 +19,7 @@ module.exports = {
       // Will be set on the <html /> tag
       siteLanguage: `ru`,
       // Used for og:image and must be placed inside the `static` folder
-      siteImage: `/banner.jpg`,
+      siteImage: `/R.jpeg`,
       // Twitter Handle
       author: `Roman Rud`,
   },
@@ -32,10 +32,6 @@ module.exports = {
           {
             title: `Блог`,
             slug: `/blog`,
-          },
-          {
-            title: `Книги`,
-            slug: `/books`,
           },
         ],
         externalLinks: [
@@ -65,14 +61,14 @@ module.exports = {
         display: `standalone`,
         icons: [
           {
-            src: `/android-chrome-192x192.png`,
+            src: `/R.jpeg`,
             sizes: `192x192`,
-            type: `image/png`,
+            type: `image/jpeg`,
           },
           {
-            src: `/android-chrome-512x512.png`,
+            src: `/R.jpeg`,
             sizes: `512x512`,
-            type: `image/png`,
+            type: `image/jpeg`,
           },
         ],
       },
