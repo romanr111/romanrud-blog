@@ -44,7 +44,7 @@ const Homepage = ({ posts }: PostsProps) => {
       <Title text="Недавние посты">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Посмотреть все</Link>
       </Title>
-      <Listing posts={posts} showTags={false} />
+      <Listing posts={posts} showTags={true} />
       <List sx={{ variant: `section_bottom` }}>
         <Bottom />
       </List>
