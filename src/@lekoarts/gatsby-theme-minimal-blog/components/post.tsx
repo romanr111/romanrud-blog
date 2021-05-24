@@ -38,8 +38,8 @@ const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`)
 const Post = ({ data: { post } }: PostProps) => (
   <Layout>
     <SEO
-      title={post.title}
-      description={post.description ? post.description : post.excerpt}
+      title={ post?.tags[0].name == "Обзор книги" ? `Краткое содержание - ${post.title}` : post.title }
+      description={ post?.tags[0].name == "Обзор книги" ? `Краткое изложение книги ${post.description} «${post.title}». Ознакомьтесь с ключевыми идеями и уроками из книги за 5 минут.` : post.excerpt }
       image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
       pathname={post.slug}
       canonicalUrl={post.canonicalUrl}
