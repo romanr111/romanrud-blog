@@ -7,7 +7,7 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 module.exports = {
   siteMetadata: {
       // Used for the title template on pages other than the index site
-      siteTitle: `Roman Rud`,
+      siteTitle: `Roman Rud Blog`,
       // Default title of the page
       siteTitleAlt: `Roman Rud Blog`,
       // Can be used for e.g. JSONLD
@@ -76,6 +76,7 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-netlify`,
+    'gatsby-plugin-sitemap',
 
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
