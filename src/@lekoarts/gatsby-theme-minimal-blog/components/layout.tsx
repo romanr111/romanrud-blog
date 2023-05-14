@@ -21,11 +21,14 @@ const Layout = ({ children, className = `` }: LayoutProps) => (
         html: {
           WebkitTextSizeAdjust: `100%`,
         },
+        body: {
+          fontFamily: `'Open Sans'`,
+        },
         img: {
           borderStyle: `none`,
         },
         pre: {
-          fontFamily: `monospace`,
+          fontFamily: `roboto`,
           fontSize: `1em`,
         },
         "[hidden]": {
