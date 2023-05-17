@@ -21,7 +21,7 @@ const Tags = ({ list }: MBTagsProps) => {
   return (
     <Layout>
       <Heading as="h1" variant="styles.h1">
-        Tags
+        Теги
       </Heading>
       <Box mt={[4, 5]}>
         {list.map((listItem) => (
@@ -41,4 +41,4 @@ const Tags = ({ list }: MBTagsProps) => {
 
 export default Tags
 
-export const Head: HeadFC = () => <Seo title="Tags" />
+export const Head: HeadFC = () => <Seo title="Теги" />
