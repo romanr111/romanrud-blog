@@ -10,8 +10,11 @@ import useSiteMetadata from "../hooks/use-site-metadata"
 import replaceSlashes from "../utils/replaceSlashes"
 import { visuallyHidden } from "../styles/utils"
 import Seo from "./seo"
-import Hero from "../texts/hero.mdx"
+// import Hero from "../texts/hero.mdx"
+import HeroTextComponent from "./hero"
+//import IndexPage from "..//..//../pages/test.component"
 import Bottom from "../texts/bottom.mdx"
+
 
 export type MBHomepageProps = {
   posts: {
@@ -36,7 +39,7 @@ const Homepage = ({ posts }: MBHomepageProps) => {
     <Layout>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section sx={{ mb: [6, 6, 6], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
-        <Hero />
+        <HeroTextComponent />
       </section>
       <Title text="Недавние посты">
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Посмотреть все</Link>
