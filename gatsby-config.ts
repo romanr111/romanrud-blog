@@ -1,36 +1,68 @@
-import type { GatsbyConfig, PluginRef } from "gatsby"
-import "dotenv/config"
+import type { GatsbyConfig, PluginRef } from "gatsby";
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+import "dotenv/config";
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 const config: GatsbyConfig = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
-      // Used for the title template on pages other than the index site
-      siteTitle: `Roman Rud Blog`,
-      // Default title of the page
-      siteTitleAlt: `Roman Rud Blog`,
-      // Can be used for e.g. JSONLD
-      siteHeadline: `Roman Rud Blog`,
-      // Will be used to generate absolute URLs for og:image etc.
-      siteUrl: `https://romanrud.com`,
-      // Used for SEO
-      siteDescription: `Roman Rud Personal Blog`,
-      // Will be set on the <html /> tag
-      siteLanguage: `ru`,
-      // Used for og:image and must be placed inside the `static` folder
-      siteImage: `/R.jpeg`,
-      // Twitter Handle
-      author: `Roman Rud`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `Roman Rud Blog`,
+    // Default title of the page
+    siteTitleAlt: `Roman Rud Blog`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `Roman Rud Blog`,
+    // Will be used to generate absolute URLs for og:image etc.
+    siteUrl: `https://romanrud.com`,
+    // Used for SEO
+    siteDescription: `Roman Rud Personal Blog`,
+    // Will be set on the <html /> tag
+    siteLanguage: `en`,
+    // Used for og:image and must be placed inside the `static` folder
+    siteImage: `/R.jpeg`,
+    // Twitter Handle
+    author: `Roman Rud`,
   },
   trailingSlash: `never`,
   plugins: [
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-react-i18next",
+      options: {
+        localeJsonSourceName: "locale",
+        languages: ["ua", "ru", "en"], // Add your supported languages here
+        defaultLanguage: "ua", // Set your default language
+        redirect: true, // Set to true if you want to redirect to the user's preferred language
+        siteUrl: "http://localhost:8000/", // Update with your website URL
+        trailingSlash: "always",
+        i18nextOptions: {
+          interpolation: {
+            escapeValue: false, // React already escapes values, so no need to escape again
+          },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+      pages: [
+        {
+          matchPath: "/:lang?/404",
+          getLanguageFromPath: false,
+        },
+      ],
+    },
+    {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        i18n: true,
         navigation: [
           {
             title: `Блог`,
@@ -83,7 +115,7 @@ const config: GatsbyConfig = {
       },
     },
     `gatsby-plugin-image`,
-    'gatsby-transformer-sharp',
+    "gatsby-transformer-sharp",
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -148,11 +180,14 @@ const config: GatsbyConfig = {
             serialize: ({
               query: { site, allPost },
             }: {
-              query: { allPost: IAllPost; site: { siteMetadata: ISiteMetadata } }
+              query: {
+                allPost: IAllPost;
+                site: { siteMetadata: ISiteMetadata };
+              };
             }) =>
               allPost.nodes.map((post) => {
-                const url = site.siteMetadata.siteUrl + post.slug
-                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`
+                const url = site.siteMetadata.siteUrl + post.slug;
+                const content = `<p>${post.excerpt}</p><div style="margin-top: 50px; font-style: italic;"><strong><a href="${url}">Keep reading</a>.</strong></div><br /> <br />`;
 
                 return {
                   title: post.title,
@@ -161,24 +196,25 @@ const config: GatsbyConfig = {
                   url,
                   guid: url,
                   custom_elements: [{ "content:encoded": content }],
-                }
+                };
               }),
             query: `{
-  allPost(sort: {date: DESC}) {
-    nodes {
-      title
-      date(formatString: "MMMM D, YYYY")
-      excerpt
-      slug
-    }
-  }
-}`,
+                      allPost(sort: {date: DESC}) {
+                        nodes {
+                          title
+                          date(formatString: "MMMM D, YYYY")
+                          excerpt
+                          slug
+                        }
+                      }
+                    }`,
             output: `rss.xml`,
             title: `Minimal Blog - @lekoarts/gatsby-theme-minimal-blog`,
           },
         ],
       },
     },
+
     shouldAnalyseBundle && {
       resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
       options: {
@@ -188,41 +224,41 @@ const config: GatsbyConfig = {
       },
     },
   ].filter(Boolean) as Array<PluginRef>,
-}
+};
 
-export default config
+export default config;
 
 interface IPostTag {
-  name: string
-  slug: string
+  name: string;
+  slug: string;
 }
 
 interface IPost {
-  slug: string
-  title: string
-  defer: boolean
-  date: string
-  excerpt: string
-  contentFilePath: string
-  html: string
-  timeToRead: number
-  wordCount: number
-  tags: Array<IPostTag>
-  banner: any
-  description: string
-  canonicalUrl: string
+  slug: string;
+  title: string;
+  defer: boolean;
+  date: string;
+  excerpt: string;
+  contentFilePath: string;
+  html: string;
+  timeToRead: number;
+  wordCount: number;
+  tags: Array<IPostTag>;
+  banner: any;
+  description: string;
+  canonicalUrl: string;
 }
 
 interface IAllPost {
-  nodes: Array<IPost>
+  nodes: Array<IPost>;
 }
 
 interface ISiteMetadata {
-  siteTitle: string
-  siteTitleAlt: string
-  siteHeadline: string
-  siteUrl: string
-  siteDescription: string
-  siteImage: string
-  author: string
+  siteTitle: string;
+  siteTitleAlt: string;
+  siteHeadline: string;
+  siteUrl: string;
+  siteDescription: string;
+  siteImage: string;
+  author: string;
 }
