@@ -1,7 +1,11 @@
-import type { GatsbyConfig, PluginRef } from "gatsby";
+import type { GatsbyConfig, PluginRef } from 'gatsby';
+import 'dotenv/config';
 
-import "dotenv/config";
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
+const siteUrl =
+  process.env.NODE_ENV == 'development'
+    ? 'http://localhost:8000/'
+    : 'https://romanrud.com/';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -9,41 +13,42 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     // Used for the title template on pages other than the index site
-    siteTitle: `Roman Rud Blog`,
+    siteTitle: 'Roman Rud Blog',
     // Default title of the page
-    siteTitleAlt: `Roman Rud Blog`,
+    siteTitleAlt: 'Roman Rud Blog',
     // Can be used for e.g. JSONLD
-    siteHeadline: `Roman Rud Blog`,
+    siteHeadline: 'Roman Rud Blog',
     // Will be used to generate absolute URLs for og:image etc.
-    siteUrl: `https://romanrud.com`,
+    siteUrl: 'https://romanrud.com',
     // Used for SEO
-    siteDescription: `Roman Rud Personal Blog`,
+    siteDescription: 'Roman Rud Personal Blog',
     // Will be set on the <html /> tag
-    siteLanguage: `en`,
-    // Used for og:image and must be placed inside the `static` folder
-    siteImage: `/R.jpeg`,
+    siteLanguage: 'en',
+    // Used for og:image and must be placed inside the 'static' folder
+    siteImage: '/R.jpeg',
     // Twitter Handle
-    author: `Roman Rud`,
+    author: 'Roman Rud',
   },
-  trailingSlash: `never`,
+  trailingSlash: 'always',
   plugins: [
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/locales`,
-        name: `locale`,
+        name: 'locale',
       },
     },
     {
-      resolve: "gatsby-plugin-react-i18next",
+      resolve: 'gatsby-plugin-react-i18next',
       options: {
-        localeJsonSourceName: "locale",
-        languages: ["ua", "ru", "en"], // Add your supported languages here
-        defaultLanguage: "ua", // Set your default language
+        localeJsonSourceName: 'locale',
+        languages: ['ua', 'ru', 'en'], // Add your supported languages here
+        defaultLanguage: 'en', // Set your default language
         redirect: true, // Set to true if you want to redirect to the user's preferred language
-        siteUrl: "http://localhost:8000/", // Update with your website URL
-        trailingSlash: "always",
+        siteUrl, // Update with your website URL
+        trailingSlash: 'always',
         i18nextOptions: {
+          fallbackLng: 'en',
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
           },
@@ -53,43 +58,43 @@ const config: GatsbyConfig = {
       },
       pages: [
         {
-          matchPath: "/:lang?/404",
+          matchPath: '/:lang?/404',
           getLanguageFromPath: false,
         },
       ],
     },
     {
-      resolve: `@lekoarts/gatsby-theme-minimal-blog`,
+      resolve: '@lekoarts/gatsby-theme-minimal-blog',
       // See the theme's README for all available options
       options: {
         i18n: true,
         navigation: [
           {
-            title: `Блог`,
-            slug: `/blog`,
+            title: 'Блог',
+            slug: '/blog',
           },
         ],
         externalLinks: [
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/romanruddd/`,
+            name: 'Instagram',
+            url: 'https://www.instagram.com/romanruddd/',
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-google-gtag`,
+      resolve: 'gatsby-plugin-google-gtag',
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "GA-TRACKING_ID", // Google Analytics / GA
+          'GA-TRACKING_ID', // Google Analytics / GA
           // "AW-CONVERSION_ID", // Google Ads / Adwords / AW
           // "DC-FLOODIGHT_ID", // Marketing Platform advertising products (Display & Video 360, Search Ads 360, and Campaign Manager)
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
         gtagConfig: {
-          optimize_id: "OPT_CONTAINER_ID",
+          optimize_id: 'OPT_CONTAINER_ID',
           anonymize_ip: true,
           cookie_expires: 0,
         },
@@ -109,20 +114,20 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-plugin-sitemap`,
+      resolve: 'gatsby-plugin-sitemap',
       options: {
-        output: `/`,
+        output: '/',
       },
     },
-    `gatsby-plugin-image`,
-    "gatsby-transformer-sharp",
-    `gatsby-plugin-sharp`,
+    'gatsby-plugin-image',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
@@ -134,32 +139,33 @@ const config: GatsbyConfig = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `minimal-blog - @lekoarts/gatsby-theme-minimal-blog`,
-        short_name: `minimal-blog`,
-        description: `Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.`,
-        start_url: `/`,
-        background_color: `#fff`,
+        name: 'minimal-blog - @lekoarts/gatsby-theme-minimal-blog',
+        short_name: 'minimal-blog',
+        description:
+          'Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.',
+        start_url: '/',
+        background_color: '#fff',
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#6B46C1`,
-        display: `standalone`,
+        // theme_color: '#6B46C1',
+        display: 'standalone',
         icons: [
           {
-            src: `/R.jpeg`,
-            sizes: `192x192`,
-            type: `image/jpeg`,
+            src: '/R.jpeg',
+            sizes: '192x192',
+            type: 'image/jpeg',
           },
           {
-            src: `/R.jpeg`,
-            sizes: `512x512`,
-            type: `image/jpeg`,
+            src: '/R.jpeg',
+            sizes: '512x512',
+            type: 'image/jpeg',
           },
         ],
       },
     },
-    `gatsby-plugin-netlify`,
+    'gatsby-plugin-netlify',
     {
       resolve: `gatsby-plugin-feed`,
       options: {
@@ -195,7 +201,7 @@ const config: GatsbyConfig = {
                   excerpt: post.excerpt,
                   url,
                   guid: url,
-                  custom_elements: [{ "content:encoded": content }],
+                  custom_elements: [{ 'content:encoded': content }],
                 };
               }),
             query: `{
@@ -214,12 +220,11 @@ const config: GatsbyConfig = {
         ],
       },
     },
-
     shouldAnalyseBundle && {
-      resolve: `gatsby-plugin-webpack-bundle-analyser-v2`,
+      resolve: 'gatsby-plugin-webpack-bundle-analyser-v2',
       options: {
-        analyzerMode: `static`,
-        reportFilename: `_bundle.html`,
+        analyzerMode: 'static',
+        reportFilename: '_bundle.html',
         openAnalyzer: false,
       },
     },
