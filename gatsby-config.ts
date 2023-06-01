@@ -42,7 +42,7 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['ua', 'ru', 'en'], // Add your supported languages here
+        languages: ['uk', 'ru', 'en'], // Add your supported languages here
         defaultLanguage: 'en', // Set your default language
         redirect: true, // Set to true if you want to redirect to the user's preferred language
         siteUrl, // Update with your website URL
