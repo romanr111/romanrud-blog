@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import type { HeadFC, PageProps } from "gatsby"
+import { HeadFC, PageProps, graphql } from "gatsby"
 import * as React from "react"
 import { jsx, Heading } from "theme-ui"
 import Layout from "./layout"
@@ -105,3 +105,17 @@ export const Head: HeadFC<MBPostProps> = ({ data: { post } }) => {
     />
   )
 }
+
+export const query = graphql`
+  query PostQuery($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`

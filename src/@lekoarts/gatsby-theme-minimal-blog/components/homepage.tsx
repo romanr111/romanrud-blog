@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { HeadFC, Link } from "gatsby"
+import { HeadFC, Link, graphql } from "gatsby"
 import Layout from "./layout"
 import Title from "./title"
 import Listing from "./listing"
@@ -12,6 +12,7 @@ import { visuallyHidden } from "../styles/utils"
 import Seo from "./seo"
 import Hero from "../texts/hero.mdx"
 import Bottom from "../texts/bottom.mdx"
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 export type MBHomepageProps = {
   posts: {
@@ -31,14 +32,16 @@ export type MBHomepageProps = {
 const Homepage = ({ posts }: MBHomepageProps) => {
   const { basePath, blogPath } = useMinimalBlogConfig()
   const { siteTitle } = useSiteMetadata()
+  const { t } = useTranslation();
 
   return (
     <Layout>
       <h1 sx={visuallyHidden}>{siteTitle}</h1>
       <section sx={{ mb: [6, 6, 6], p: { fontSize: [1, 2, 3], mt: 2 }, variant: `section_hero` }}>
         <Hero />
+        {t("hero_recent_posts")}
       </section>
-      <Title text="Недавние посты">
+      <Title text={t("hero_recent_posts")}>
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Посмотреть все</Link>
       </Title>
       <Listing posts={posts} showTags={false} />
@@ -52,3 +55,17 @@ const Homepage = ({ posts }: MBHomepageProps) => {
 export default Homepage
 
 export const Head: HeadFC = () => <Seo />
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

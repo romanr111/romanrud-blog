@@ -8,11 +8,12 @@ import Header from "./header"
 import Footer from "./footer"
 import CodeStyles from "../styles/code"
 import SkipNavLink from "./skip-nav"
+import Translate from "./translate-blog" // import the Translate component
 
 type LayoutProps = { children: React.ReactNode; className?: string }
 
 const Layout = ({ children, className = `` }: LayoutProps) => (
-  <MDXProvider components={MdxComponents}>
+<MDXProvider components={{...MdxComponents, Translate }}>
     <Global
       styles={(t) => ({
         "*": {

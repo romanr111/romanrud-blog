@@ -1,5 +1,7 @@
 {
   "title": "Your Search For Better Sleep Ends Here",
-  "hello": "привіт",
-  "Roman Rud Blog": "Roman Rud Blog"
+  "hero_greeting": "Hi",
+  "hero_description": "From time to time I write articles on topics that interest me :)",
+  "hero_recent_posts": "Нещодавні пости",
+  "Roman Rud Blog": "Roman Rud"
 }
