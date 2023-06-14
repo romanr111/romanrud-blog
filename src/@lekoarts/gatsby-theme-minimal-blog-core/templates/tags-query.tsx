@@ -1,14 +1,16 @@
-import { graphql } from "gatsby"
-import TagsComponent, { Head } from "../../gatsby-theme-minimal-blog/components/tags"
+import { graphql } from 'gatsby';
+import TagsComponent, {
+  Head,
+} from '../../gatsby-theme-minimal-blog/components/tags';
 
-export default TagsComponent
+export default TagsComponent;
 
-export { Head }
+export { Head };
 
 export const query = graphql`
   query ($language: String!) {
-    allPost {
-      group(field: tags___name) {
+    list: allPost {
+      group(field: { tags: { name: SELECT } }) {
         fieldValue
         totalCount
       }
@@ -24,4 +26,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

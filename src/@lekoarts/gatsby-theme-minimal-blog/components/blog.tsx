@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Heading, Flex } from "theme-ui";
-import { HeadFC, Link, graphql } from "gatsby";
-import Layout from "./layout";
-import Listing from "./listing";
-import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
-import replaceSlashes from "../utils/replaceSlashes";
-import Seo from "./seo";
+import { jsx, Heading, Flex } from 'theme-ui';
+import { HeadFC, Link, graphql } from 'gatsby';
+import Layout from './layout';
+import Listing from './listing';
+import useMinimalBlogConfig from '../hooks/use-minimal-blog-config';
+import replaceSlashes from '../utils/replaceSlashes';
+import Seo from './seo';
 
 type POST = {
   slug: string;
@@ -59,17 +59,3 @@ export default Blog;
 export const Head: HeadFC = (props) => {
   return <Seo title="Блог" />;
 };
-
-export const query = graphql`
-  query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;
