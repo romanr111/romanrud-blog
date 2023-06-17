@@ -35,22 +35,39 @@ ns: 'blog.7-habits'
   }
 `}</style>
 
-<Translation id="main_heading" tag="h2" ns="blog.7-habits" {...props} />
+<Translation
+  id="main_heading"
+  tag="h2"
+  ns={props.pageContext.frontmatter.ns}
+  ns={props.pageContext.frontmatter.ns}
+/>
 
-<Translation id="main_description" tag="p" ns="blog.7-habits" />
+<Translation
+  id="main_description"
+  tag="p"
+  ns={props.pageContext.frontmatter.ns}
+/>
 
-<Translation id="key_points" tag="h3" ns="blog.7-habits" />
+<Translation id="key_points" tag="h3" ns={props.pageContext.frontmatter.ns} />
 
-<Translation id="key_points_sum" tag="p" ns="blog.7-habits" />
+<Translation
+  id="key_points_sum"
+  tag="p"
+  ns={props.pageContext.frontmatter.ns}
+/>
 
 <Translation
   id="key_points_note"
   tag="strong"
   wrapperTag="p"
-  ns="blog.7-habits"
+  ns={props.pageContext.frontmatter.ns}
 />
 
-<Translation id="proactivity_heading" tag="h5" ns="blog.7-habits" />
+<Translation
+  id="proactivity_heading"
+  tag="h5"
+  ns={props.pageContext.frontmatter.ns}
+/>
 
 ---
 
@@ -58,51 +75,84 @@ ns: 'blog.7-habits'
     id="proactivity_paragraph1"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
-  - <Translation id="proactivity_subItem1" ns="blog.7-habits" />
-  - <Translation id="proactivity_subItem2" ns="blog.7-habits" />
+  - <Translation
+      id="proactivity_subItem1"
+      ns={props.pageContext.frontmatter.ns}
+    />
+  - <Translation
+      id="proactivity_subItem2"
+      ns={props.pageContext.frontmatter.ns}
+    />
 
-- <Translation id="personality_reflection" tag="p" ns="blog.7-habits" />
+- <Translation
+    id="personality_reflection"
+    tag="p"
+    ns={props.pageContext.frontmatter.ns}
+  />
 
 - <Translation
     id="proactive_approach"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
-  - <Translation id="proactive_subItem" tag="li" ns="blog.7-habits" />
+  - <Translation
+      id="proactive_subItem"
+      tag="li"
+      ns={props.pageContext.frontmatter.ns}
+    />
 
-- <Translation id="financial_success" tag="p" ns="blog.7-habits" />
+- <Translation
+    id="financial_success"
+    tag="p"
+    ns={props.pageContext.frontmatter.ns}
+  />
 
 #
 
-<Translation id="result_visualization" tag="h5" ns="blog.7-habits" />
+<Translation
+  id="result_visualization"
+  tag="h5"
+  ns={props.pageContext.frontmatter.ns}
+/>
 
 ---
 
 #
 
-- <Translation id="goal_text" tag="strong" ns="blog.7-habits" />
+- <Translation
+    id="goal_text"
+    tag="strong"
+    ns={props.pageContext.frontmatter.ns}
+  />
 
-> — <Translation id="question_text" ns="blog.7-habits" />
+> — <Translation id="question_text" ns={props.pageContext.frontmatter.ns} />
 >
-> — <Translation id="alice_phrase" ns="blog.7-habits" />
+> — <Translation id="alice_phrase" ns={props.pageContext.frontmatter.ns} />
 >
-> — <Translation id="cat_phrase" ns="blog.7-habits" />
+> — <Translation id="cat_phrase" ns={props.pageContext.frontmatter.ns} />
 >
-> — <Translation id="alice_in_wonderland" ns="blog.7-habits" />
+> — <Translation id="alice_in_wonderland" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-- <Translation id="visualization_applicable" ns="blog.7-habits" />
-  - <Translation id="detailed_playout" ns="blog.7-habits" />
+- <Translation
+    id="visualization_applicable"
+    ns={props.pageContext.frontmatter.ns}
+  />
+  - <Translation id="detailed_playout" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-<Translation id="correct_prioritization" tag="h5" ns="blog.7-habits" />
+<Translation
+  id="correct_prioritization"
+  tag="h5"
+  ns={props.pageContext.frontmatter.ns}
+/>
 
 ---
 
@@ -110,19 +160,42 @@ ns: 'blog.7-habits'
     id="activity_factors"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
-  - <Translation id="priority_order" ns="blog.7-habits" />
-    - <Translation id="important_urgent" ns="blog.7-habits" />
-    - <Translation id="important_not_urgent" ns="blog.7-habits" />
-    - <Translation id="not_important_urgent" ns="blog.7-habits" />
-    - <Translation id="not_important_not_urgent" ns="blog.7-habits" />
+  - <Translation id="priority_order" ns={props.pageContext.frontmatter.ns} />
+    - <Translation
+      id="important_urgent"
+      ns={props.pageContext.frontmatter.ns}
+      />
+    - <Translation
+      id="important_not_urgent"
+      ns={props.pageContext.frontmatter.ns}
+      />
+    - <Translation
+      id="not_important_urgent"
+      ns={props.pageContext.frontmatter.ns}
+      />
+    - <Translation
+      id="not_important_not_urgent"
+      ns={props.pageContext.frontmatter.ns}
+      />
 
-  - <Translation id="focus_on_important_not_urgent" ns="blog.7-habits" />
+  - <Translation
+      id="focus_on_important_not_urgent"
+      ns={props.pageContext.frontmatter.ns}
+    />
 
-- <Translation id="delegation" tag="strong" wrapperTag="p" ns="blog.7-habits" />
-  - <Translation id="delegation_benefits" ns="blog.7-habits" />
+- <Translation
+    id="delegation"
+    tag="strong"
+    wrapperTag="p"
+    ns={props.pageContext.frontmatter.ns}
+  />
+  - <Translation
+    id="delegation_benefits"
+    ns={props.pageContext.frontmatter.ns}
+    />
 
 #
 
@@ -134,69 +207,69 @@ ns: 'blog.7-habits'
   id="interdependence_skills"
   tag="strong"
   wrapperTag="p"
-  ns="blog.7-habits"
+  ns={props.pageContext.frontmatter.ns}
 />
 
-- <Translation id="interdependence_definition" ns="blog.7-habits" />
-  - <Translation id="interdependence_choice" ns="blog.7-habits" />
+- <Translation id="interdependence_definition" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="interdependence_choice" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-<Translation id="mutual_gain" tag="h5" ns="blog.7-habits" />
+<Translation id="mutual_gain" tag="h5" ns={props.pageContext.frontmatter.ns} />
 
 ---
 
-- <Translation id="mutual_gain_description" tag="strong" ns="blog.7-habits" />
-  - <Translation id="win_win_interaction" ns="blog.7-habits" />
-  - <Translation id="success_without_others" ns="blog.7-habits" />
+- <Translation id="mutual_gain_description" tag="strong" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="win_win_interaction" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="success_without_others" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-<Translation id="perception_of_the_world" tag="h5" ns="blog.7-habits" />
+<Translation id="perception_of_the_world" tag="h5" ns={props.pageContext.frontmatter.ns} />
 
 ---
 
 - <Translation
     id="perception_of_the_world_description"
     tag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
 - <Translation
     id="understand_before_offering_solution"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
-  - <Translation id="empathetic_listening_technique" ns="blog.7-habits" />
-  - <Translation id="interrogation" ns="blog.7-habits" />
+  - <Translation id="empathetic_listening_technique" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="interrogation" ns={props.pageContext.frontmatter.ns} />
 
 - <Translation
     id="essence_description"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
-  - <Translation id="ethos" ns="blog.7-habits" />
-  - <Translation id="pathos" ns="blog.7-habits" />
-  - <Translation id="logos" ns="blog.7-habits" />
+  - <Translation id="ethos" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="pathos" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="logos" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-<Translation id="skill_of_effective_interaction" tag="h5" ns="blog.7-habits" />
+<Translation id="skill_of_effective_interaction" tag="h5" ns={props.pageContext.frontmatter.ns} />
 
 ---
 
 - <Translation
     id="synergy_achieved_through_positive_teamwork"
     tag="strong"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
   - <Translation
       id="synergistic_communication_values_differences"
-      ns="blog.7-habits"
+      ns={props.pageContext.frontmatter.ns}
     />
 
 #
@@ -204,7 +277,7 @@ ns: 'blog.7-habits'
 <Translation
   id="continuous_self_renewal_and_improvement"
   tag="h5"
-  ns="blog.7-habits"
+  ns={props.pageContext.frontmatter.ns}
 />
 
 ---
@@ -213,32 +286,32 @@ ns: 'blog.7-habits'
     id="skill_description"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
 
-  - <Translation id="nature_components" ns="blog.7-habits" />
-    - <Translation id="spiritual" ns="blog.7-habits" />
-    - <Translation id="intellectual" ns="blog.7-habits" />
-    - <Translation id="physical" ns="blog.7-habits" />
-    - <Translation id="social_emotional" ns="blog.7-habits" />
+  - <Translation id="nature_components" ns={props.pageContext.frontmatter.ns} />
+    - <Translation id="spiritual" ns={props.pageContext.frontmatter.ns} />
+    - <Translation id="intellectual" ns={props.pageContext.frontmatter.ns} />
+    - <Translation id="physical" ns={props.pageContext.frontmatter.ns} />
+    - <Translation id="social_emotional" ns={props.pageContext.frontmatter.ns} />
 
 - <Translation
     id="sustainable_life"
     tag="strong"
     wrapperTag="p"
-    ns="blog.7-habits"
+    ns={props.pageContext.frontmatter.ns}
   />
-  - <Translation id="focus_on_results" ns="blog.7-habits" />
-  - <Translation id="focus_on_resources" ns="blog.7-habits" />
+  - <Translation id="focus_on_results" ns={props.pageContext.frontmatter.ns} />
+  - <Translation id="focus_on_resources" ns={props.pageContext.frontmatter.ns} />
 
 #
 
-<Translation id="message" tag="h3" ns="blog.7-habits" />
+<Translation id="message" tag="h3" ns={props.pageContext.frontmatter.ns} />
 
-<Translation id="experience_before" tag="p" ns="blog.7-habits" />
+<Translation id="experience_before" tag="p" ns={props.pageContext.frontmatter.ns} />
 
-<Translation id="irresponsible_carefree" tag="p" ns="blog.7-habits" />
+<Translation id="irresponsible_carefree" tag="p" ns={props.pageContext.frontmatter.ns} />
 
-<Translation id="book_on_rereading_list" tag="p" ns="blog.7-habits" />
+<Translation id="book_on_rereading_list" tag="p" ns={props.pageContext.frontmatter.ns} />
 
-<Translation id="recommendation" tag="p" ns="blog.7-habits" />
+<Translation id="recommendation" tag="p" ns={props.pageContext.frontmatter.ns} />

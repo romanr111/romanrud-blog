@@ -33,9 +33,12 @@ const Translation = ({
   const content = tag ? (
     <Text as={tag} sx={styles} {...props}>
       {t(id)}
+      {children}
     </Text>
   ) : (
-    <React.Fragment>{t(id)}</React.Fragment>
+    <React.Fragment>
+      {t(id)} {children}
+    </React.Fragment>
   );
 
   if (wrapperTag) {

@@ -4,6 +4,7 @@ import { jsx, Heading } from 'theme-ui';
 import Layout from './layout';
 import Seo from './seo';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 export type MBPageProps = {
   page: {
@@ -13,14 +14,19 @@ export type MBPageProps = {
   };
 };
 
-const Page: React.FC<React.PropsWithChildren<PageProps<MBPageProps>>> = ({
-  data: { page },
-  children,
-}) => {
+type PageContext = {
+  frontmatter: { ns: string };
+};
+
+const Page: React.FC<
+  React.PropsWithChildren<PageProps<MBPageProps, PageContext>>
+> = ({ children, pageContext }) => {
+  const ns = pageContext?.frontmatter.ns;
+  const { t } = useTranslation(ns);
   return (
     <Layout>
       <Heading as="h2" variant="styles.h2">
-        {page.title}
+        {t('title')}
       </Heading>
       <section sx={{ my: 5, variant: `layout.content` }}>{children}</section>
     </Layout>
