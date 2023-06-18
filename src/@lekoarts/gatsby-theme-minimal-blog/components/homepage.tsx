@@ -12,7 +12,7 @@ import { visuallyHidden } from '../styles/utils';
 import Seo from './seo';
 import Hero from '../texts/hero.mdx';
 import Bottom from '../texts/bottom.mdx';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { Translation, useTranslation } from 'gatsby-plugin-react-i18next';
 
 export type MBHomepageProps = {
   data: {
@@ -28,6 +28,7 @@ export type MBHomepageProps = {
           name: string;
           slug: string;
         }[];
+        ns: string;
       }[];
     };
   };
@@ -36,7 +37,7 @@ export type MBHomepageProps = {
 const Homepage = ({ data }: MBHomepageProps) => {
   const { basePath, blogPath } = useMinimalBlogConfig();
   const { siteTitle } = useSiteMetadata();
-  const { t } = useTranslation();
+  const { t } = useTranslation('home');
   const posts = data?.allPost?.nodes;
 
   return (
@@ -50,11 +51,10 @@ const Homepage = ({ data }: MBHomepageProps) => {
         }}
       >
         <Hero />
-        {t('hero_recent_posts')}
       </section>
       <Title text={t('hero_recent_posts')}>
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>
-          Посмотреть все
+          {t('see_all')}
         </Link>
       </Title>
       <Listing posts={posts} showTags={false} />

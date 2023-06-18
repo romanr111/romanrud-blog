@@ -1,7 +1,7 @@
-import { graphql } from "gatsby";
+import { graphql } from 'gatsby';
 import BlogComponent, {
   Head,
-} from "../../gatsby-theme-minimal-blog/components/blog";
+} from '../../gatsby-theme-minimal-blog/components/blog';
 
 export default BlogComponent;
 
@@ -21,6 +21,7 @@ export const query = graphql`
           name
           slug
         }
+        ns
       }
     }
 

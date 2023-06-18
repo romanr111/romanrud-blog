@@ -14,6 +14,7 @@ type POST = {
   excerpt: string;
   description: string;
   timeToRead?: number;
+  ns: string;
   tags?: {
     name: string;
     slug: string;

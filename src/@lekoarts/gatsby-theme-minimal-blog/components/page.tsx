@@ -11,6 +11,7 @@ export type MBPageProps = {
     title: string;
     slug: string;
     excerpt: string;
+    ns: string;
   };
 };
 
@@ -20,8 +21,8 @@ type PageContext = {
 
 const Page: React.FC<
   React.PropsWithChildren<PageProps<MBPageProps, PageContext>>
-> = ({ children, pageContext }) => {
-  const ns = pageContext?.frontmatter.ns;
+> = ({ children, data }) => {
+  const ns = data?.page?.ns;
   const { t } = useTranslation(ns);
   return (
     <Layout>

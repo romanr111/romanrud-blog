@@ -1,9 +1,11 @@
-import { graphql } from "gatsby"
-import PageComponent, { Head } from "../../gatsby-theme-minimal-blog/components/page"
+import { graphql } from 'gatsby';
+import PageComponent, {
+  Head,
+} from '../../gatsby-theme-minimal-blog/components/page';
 
-export default PageComponent
+export default PageComponent;
 
-export { Head }
+export { Head };
 
 export const query = graphql`
   query ($slug: String!, $language: String!) {
@@ -11,6 +13,7 @@ export const query = graphql`
       title
       slug
       excerpt
+      ns
     }
 
     locales: allLocale(filter: { language: { eq: $language } }) {
@@ -23,4 +26,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,13 +1,18 @@
-import { graphql } from "gatsby"
-import TagComponent, { Head } from "../../gatsby-theme-minimal-blog/components/tag"
+import { graphql } from 'gatsby';
+import TagComponent, {
+  Head,
+} from '../../gatsby-theme-minimal-blog/components/tag';
 
-export default TagComponent
+export default TagComponent;
 
-export { Head }
+export { Head };
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!, $language: String!) {
-    allPost(sort: { date: DESC }, filter: { tags: { elemMatch: { slug: { eq: $slug } } } }) {
+    allPost(
+      sort: { date: DESC }
+      filter: { tags: { elemMatch: { slug: { eq: $slug } } } }
+    ) {
       nodes {
         slug
         title
@@ -19,6 +24,7 @@ export const query = graphql`
           name
           slug
         }
+        ns
       }
     }
 
@@ -32,4 +38,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -7,6 +7,7 @@ import Layout from './layout';
 import useMinimalBlogConfig from '../hooks/use-minimal-blog-config';
 import Seo from './seo';
 import replaceSlashes from '../utils/replaceSlashes';
+import { useTranslation } from 'react-i18next';
 
 export type MBTagsProps = {
   data: {
@@ -19,9 +20,10 @@ export type MBTagsProps = {
   };
 };
 
-const Tags = ({ data, ...props }: MBTagsProps) => {
+const Tags = ({ data }: MBTagsProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const list = data?.list?.group;
+  const { t } = useTranslation('tags');
 
   return (
     <Layout>
@@ -41,7 +43,7 @@ const Tags = ({ data, ...props }: MBTagsProps) => {
                 `/${basePath}/${tagsPath}/${kebabCase(listItem.fieldValue)}`
               )}
             >
-              {listItem.fieldValue}{' '}
+              {t(listItem.fieldValue)}{' '}
               <span sx={{ color: `secondary` }}>({listItem.totalCount})</span>
             </Link>
           </Flex>

@@ -28,6 +28,7 @@ export const query = graphql`
           }
         }
       }
+      ns
     }
 
     locales: allLocale(filter: { language: { eq: $language } }) {

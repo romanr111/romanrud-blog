@@ -48,11 +48,13 @@ const config: GatsbyConfig = {
         siteUrl, // Update with your website URL
         trailingSlash: 'always',
         i18nextOptions: {
+          ns: ['index', 'blog', 'book', 'home'],
           fallbackLng: 'en',
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
           },
-          keySeparator: false,
+          // debug: true,
+          keySeparator: '.',
           nsSeparator: false,
         },
       },

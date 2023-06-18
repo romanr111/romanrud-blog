@@ -21,6 +21,7 @@ export type MBTagProps = {
           name: string;
           slug: string;
         }[];
+        ns?: string;
       }[];
     };
   };
@@ -34,6 +35,7 @@ export type MBTagProps = {
 const Tag = ({ data, pageContext }: MBTagProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const posts = data?.allPost?.nodes;
+
   return (
     <Layout>
       <Flex

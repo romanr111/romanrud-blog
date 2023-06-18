@@ -13,6 +13,9 @@ export const query = graphql`
       group(field: { tags: { name: SELECT } }) {
         fieldValue
         totalCount
+        nodes {
+          ns
+        }
       }
     }
 

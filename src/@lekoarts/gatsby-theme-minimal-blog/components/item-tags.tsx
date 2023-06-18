@@ -21,7 +21,7 @@ const ItemTags = ({ tags, ns }: TagsProps) => {
   return (
     <React.Fragment>
       {tags.map((tag, i) => {
-        const i18nKey = `tags.${tag.name}`;
+        const i18nKey = `${tag.name}`;
         return (
           <React.Fragment key={tag.slug}>
             {!!i && `, `}

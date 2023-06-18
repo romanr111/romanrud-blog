@@ -34,23 +34,20 @@ export type MBPostProps = {
         gatsbyImageData: any;
       };
     };
+    ns: string;
   };
-};
-
-type PageContext = {
-  frontmatter: { ns: string };
 };
 
 const px = [`32px`, `16px`, `8px`, `4px`];
 const shadow = px.map((v) => `rgba(0, 0, 0, 0.15) 0px ${v} ${v} 0px`);
 
-const Post: React.FC<
-  React.PropsWithChildren<PageProps<MBPostProps, PageContext>>
-> = ({ data, pageContext, children }) => {
+const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
+  data,
+  children,
+}) => {
   const post = data?.post;
-  const ns = pageContext?.frontmatter.ns;
+  const ns = post?.ns;
   const isTranslationEnabled = !!ns;
-
   const { t } = useTranslation(ns);
 
   return (
