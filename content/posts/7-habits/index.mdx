@@ -35,6 +35,30 @@ ns: 'blog.7-habits'
   }
 `}</style>
 
+
+
+{
+  // TODO: To remove once development is done.
+}
+
+<Translation
+  id="sectionContent"
+  tag="p"
+  ns={props.data.post.ns}
+/>
+
+<Translation id="sectionTitle" tag="h1" ns={props.data.post.ns} />
+<Translation id="paragraph" tag="p" ns={props.data.post.ns} />
+<ul>
+  <li><Translation id="item1" tag="span" ns={props.data.post.ns} /></li>
+  <li><Translation id="item2" tag="span" ns={props.data.post.ns} /></li>
+  <li><Translation id="item3" tag="span" ns={props.data.post.ns} /></li>
+</ul>
+
+{
+  // - - - - - - - - - - - - - -
+}
+
 <Translation
   id="main_heading"
   tag="h2"

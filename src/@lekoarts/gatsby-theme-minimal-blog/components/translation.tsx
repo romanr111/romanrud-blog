@@ -1,15 +1,13 @@
-import React, { ElementType, ReactNode } from 'react';
+import React, { ElementType } from 'react';
 import { useTranslation } from 'react-i18next';
+import ReactMarkdown from 'react-markdown';
 import { Text, Theme } from 'theme-ui';
 
 type TranslationProps = {
   id: string;
   ns: string | string[];
-  className?: string;
   tag?: ElementType;
-  wrapperTag?: ElementType;
-  wrapperProps?: React.HTMLAttributes<HTMLElement>;
-  children?: ReactNode;
+  children?: React.ReactNode;
 };
 
 const pTagStyles = { mt: '20px', mb: '20px' };
@@ -18,9 +16,6 @@ const Translation = ({
   id,
   ns,
   tag,
-  wrapperTag,
-  wrapperProps,
-  children,
   ...props
 }: TranslationProps) => {
   const { t } = useTranslation(ns);
@@ -32,30 +27,11 @@ const Translation = ({
 
   const content = tag ? (
     <Text as={tag} sx={styles} {...props}>
-      {t(id)}
-      {children}
+      <ReactMarkdown>{t(id)}</ReactMarkdown>
     </Text>
   ) : (
-    <React.Fragment>
-      {t(id)} {children}
-    </React.Fragment>
+    <ReactMarkdown>{t(id)}</ReactMarkdown>
   );
-
-  if (wrapperTag) {
-    const isWrapperPTag = wrapperTag == 'p';
-    const wrapperStyles = (t: Theme) => {
-      return {
-        ...(isWrapperPTag ? pTagStyles : {}),
-        ...t?.styles?.[`${wrapperTag}`],
-      };
-    };
-    return (
-      <Text as={wrapperTag} sx={wrapperStyles} {...wrapperProps}>
-        {content}
-        {children}
-      </Text>
-    );
-  }
 
   return content;
 };

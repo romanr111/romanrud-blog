@@ -1,4 +1,13 @@
 {
+
+  "sectionContent": "# Section Title\n\nThis is a paragraph. It has some _emphasized text_ and **strong text**.\n\n- Item 1\n- Item 2\n- Item 3",
+  "sectionTitle": "Section Title",
+  "paragraph": "This is a paragraph. It has some _emphasized text_ and **strong text**.",
+  "item1": "Item 1",
+  "item2": "Item 2",
+  "item3": "Item 3",
+  "image_path": "/images/seven-habits-of-highly-effecitve-people-book-en.jpg",
+
   "title": "Seven skills of highly effective people",
   "min_read": "min read",
   "section1": "This is the 7 habits first section of the blog post",
