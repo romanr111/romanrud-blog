@@ -28,7 +28,7 @@ const Tags = ({ data }: MBTagsProps) => {
   return (
     <Layout>
       <Heading as="h1" variant="styles.h1">
-        Теги
+        {t('Tags')}
       </Heading>
       <Box mt={[4, 5]}>
         {list.map((listItem) => (

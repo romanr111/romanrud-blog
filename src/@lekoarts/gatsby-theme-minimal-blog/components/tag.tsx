@@ -6,6 +6,7 @@ import useMinimalBlogConfig from '../hooks/use-minimal-blog-config';
 import Listing from './listing';
 import replaceSlashes from '../utils/replaceSlashes';
 import Seo from './seo';
+import { useTranslation } from 'react-i18next';
 
 export type MBTagProps = {
   data: {
@@ -35,6 +36,7 @@ export type MBTagProps = {
 const Tag = ({ data, pageContext }: MBTagProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const posts = data?.allPost?.nodes;
+  const { t } = useTranslation('tags');
 
   return (
     <Layout>
@@ -46,7 +48,7 @@ const Tag = ({ data, pageContext }: MBTagProps) => {
         }}
       >
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          {pageContext.name}
+          {t(pageContext.name)}
         </Heading>
         <Link
           sx={(t) => ({
@@ -56,7 +58,7 @@ const Tag = ({ data, pageContext }: MBTagProps) => {
           })}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
-          View all tags
+          {t('view_all_tags')}
         </Link>
       </Flex>
       <Listing posts={posts} sx={{ mt: [4, 5] }} />
