@@ -1,8 +1,13 @@
 {
-  "title": "Your Search For Better Sleep Ends Here",
+  "title": "Your Search For Better Sleep Ends Here Uk",
   "hero_greeting": "Hi",
   "hero_description": "From time to time I write articles on topics that interest me :)",
   "hero_recent_posts": "Нещодавні пости",
-  "Roman Rud Blog": "Roman Rud",
-  "Блог": "БЛОГГГ"
+  "Roman Rud Blog": "Роман Рудь",
+  "Блог": "БЛОГГГ",
+  "brief_content": "Короткий зміст",
+  "seo_site_title": "Блог Романа Руда",
+  "seo_default_site_title": "Блог Романа Руда",
+  "book_summary": "Короткий зміст книги",
+  "learn_key_ideas": "Дізнайтеся ключові ідеї та уроки з книг за 5 хвилин."
 }

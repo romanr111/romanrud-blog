@@ -1,11 +1,11 @@
 /** @jsx jsx */
-import { jsx, Heading, Flex } from "theme-ui";
-import { HeadFC, Link, graphql } from "gatsby";
-import Layout from "./layout";
-import Listing from "./listing";
-import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
-import replaceSlashes from "../utils/replaceSlashes";
-import Seo from "./seo";
+import { jsx, Heading, Flex } from 'theme-ui';
+import { Link } from 'gatsby';
+import Layout from './layout';
+import Listing from './listing';
+import useMinimalBlogConfig from '../hooks/use-minimal-blog-config';
+import replaceSlashes from '../utils/replaceSlashes';
+import { useTranslation } from 'react-i18next';
 
 type POST = {
   slug: string;
@@ -14,6 +14,7 @@ type POST = {
   excerpt: string;
   description: string;
   timeToRead?: number;
+  ns: string;
   tags?: {
     name: string;
     slug: string;
@@ -26,8 +27,10 @@ export type MBBlogProps = {
 const Blog = (props: MBBlogProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const { allPost } = props?.data;
+  const { t } = useTranslation('blog.index');
+  const title = t('title');
   return (
-    <Layout>
+    <Layout title={title}>
       <Flex
         sx={{
           alignItems: `center`,
@@ -36,7 +39,7 @@ const Blog = (props: MBBlogProps) => {
         }}
       >
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          Блог
+          {t('Блог')}
         </Heading>
         <Link
           sx={(t) => ({
@@ -46,7 +49,7 @@ const Blog = (props: MBBlogProps) => {
           })}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
-          Все теги
+          {t('all_tags')}
         </Link>
       </Flex>
       <Listing posts={allPost?.nodes} sx={{ mt: [4, 5] }} />
@@ -55,21 +58,3 @@ const Blog = (props: MBBlogProps) => {
 };
 
 export default Blog;
-
-export const Head: HeadFC = (props) => {
-  return <Seo title="Блог" />;
-};
-
-export const query = graphql`
-  query ($language: String!) {
-    locales: allLocale(filter: { language: { eq: $language } }) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`;

@@ -1,11 +1,7 @@
-import { graphql } from "gatsby";
-import BlogComponent, {
-  Head,
-} from "../../gatsby-theme-minimal-blog/components/blog";
+import { graphql } from 'gatsby';
+import BlogComponent from '../../gatsby-theme-minimal-blog/components/blog';
 
 export default BlogComponent;
-
-export { Head };
 
 export const query = graphql`
   query ($formatString: String!, $language: String!) {
@@ -21,6 +17,7 @@ export const query = graphql`
           name
           slug
         }
+        ns
       }
     }
 

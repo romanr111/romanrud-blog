@@ -1,7 +1,13 @@
 {
-  "title": "Your Search For Better Sleep Ends Here",
+  "title": "Your Search For Better Sleep Ends Here RU",
   "hero_greeting": "Hi",
   "hero_description": "From time to time I write articles on topics that interest me :)",
   "hero_recent_posts": "Нещодавні пости",
-  "Roman Rud Blog": "Roman Rud"
+  "Roman Rud Blog": "Роман Рудь",
+  "Блог": "Блог",
+  "brief_content": "Краткое содержание",
+  "seo_site_title": "Блог Романа Руда",
+  "seo_default_site_title": "Блог Романа Руда",
+  "book_summary": "Краткое содержание книги",
+  "learn_key_ideas": "Изучите ключевые идеи и уроки из книг за 5 минут."
 }

@@ -1,9 +1,7 @@
-import { graphql } from "gatsby"
-import PostComponent, { Head } from "../../gatsby-theme-minimal-blog/components/post";
+import { graphql } from 'gatsby';
+import PostComponent from '../../gatsby-theme-minimal-blog/components/post';
 
-export default PostComponent
-
-export { Head }
+export default PostComponent;
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!, $language: String!) {
@@ -26,8 +24,9 @@ export const query = graphql`
           }
         }
       }
+      ns
     }
-    
+
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
@@ -38,4 +37,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
