@@ -6,6 +6,7 @@ type TranslationProps = {
   id: string;
   ns: string | string[];
   className?: string;
+  altTextId?: string;
   tag?: ElementType;
   wrapperTag?: ElementType;
   wrapperProps?: React.HTMLAttributes<HTMLElement>;
@@ -19,6 +20,7 @@ const Translation = ({
   ns,
   tag,
   wrapperTag,
+  altTextId,
   wrapperProps,
   children,
   ...props
@@ -55,6 +57,12 @@ const Translation = ({
         {children}
       </Text>
     );
+  }
+
+  if (tag === 'img') {
+    const imagePath = t(id);
+    const altText = altTextId && t(altTextId);
+    return <img src={imagePath} alt={altText} {...props} />;
   }
 
   return content;
