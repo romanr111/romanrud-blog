@@ -49,9 +49,27 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
   const ns = post?.ns;
   const isTranslationEnabled = !!ns;
   const { t } = useTranslation(ns);
+  const firstTag = post.tags && post.tags[0];
+  const isBookReview = firstTag && firstTag.name === 'Обзор книги';
+
+  const title = isBookReview
+    ? `${t('brief_content')} - ${t('title')}`
+    : post.title;
+
+  const description = isBookReview
+    ? `${t('book_summary')} ${t('description')} «${t('title')}». ${t(
+        'learn_key_ideas'
+      )}`
+    : post.excerpt;
 
   return (
-    <Layout>
+    <Layout
+      title={title}
+      description={description}
+      image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
+      pathname={post.slug}
+      canonicalUrl={post.canonicalUrl}
+    >
       <Heading as="h1" variant="styles.h1">
         {isTranslationEnabled ? t('title') : post.title}
       </Heading>
@@ -101,25 +119,3 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
 };
 
 export default Post;
-
-export const Head: HeadFC<MBPostProps> = ({ data: { post } }) => {
-  const firstTag = post.tags && post.tags[0];
-  const isBookReview = firstTag && firstTag.name === 'Обзор книги';
-
-  const title = isBookReview
-    ? `Краткое содержание - ${post.title}`
-    : post.title;
-  const description = isBookReview
-    ? `Краткое изложение книги ${post.description} «${post.title}». Ознакомьтесь с ключевыми идеями и уроками из книги за 5 минут.`
-    : post.excerpt;
-
-  return (
-    <Seo
-      title={title}
-      description={description}
-      image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
-      pathname={post.slug}
-      canonicalUrl={post.canonicalUrl}
-    />
-  );
-};

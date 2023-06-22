@@ -66,5 +66,3 @@ const Homepage = ({ data }: MBHomepageProps) => {
 };
 
 export default Homepage;
-
-export const Head: HeadFC = () => <Seo />;

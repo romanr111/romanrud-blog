@@ -1,11 +1,7 @@
 import { graphql } from 'gatsby';
-import TagComponent, {
-  Head,
-} from '../../gatsby-theme-minimal-blog/components/tag';
+import TagComponent from '../../gatsby-theme-minimal-blog/components/tag';
 
 export default TagComponent;
-
-export { Head };
 
 export const query = graphql`
   query ($slug: String!, $formatString: String!, $language: String!) {

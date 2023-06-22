@@ -4,5 +4,10 @@
   "hero_description": "From time to time I write articles on topics that interest me :)",
   "hero_recent_posts": "Recent posts",
   "Roman Rud Blog": "Roman Rud",
-  "Блог": "Blog"
+  "Блог": "Blog",
+  "brief_content": "Brief content",
+  "seo_site_title": "Roman Rud Blog",
+  "seo_default_site_title": "Roman Rud Blog",
+  "book_summary": "Summary of the book",
+  "learn_key_ideas": "Learn key ideas and lessons from books in 5 minutes."
 }

@@ -1,11 +1,10 @@
 /** @jsx jsx */
 import { jsx, Heading, Flex } from 'theme-ui';
-import { HeadFC, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import Layout from './layout';
 import useMinimalBlogConfig from '../hooks/use-minimal-blog-config';
 import Listing from './listing';
 import replaceSlashes from '../utils/replaceSlashes';
-import Seo from './seo';
 import { useTranslation } from 'react-i18next';
 
 export type MBTagProps = {
@@ -39,7 +38,7 @@ const Tag = ({ data, pageContext }: MBTagProps) => {
   const { t } = useTranslation('tags');
 
   return (
-    <Layout>
+    <Layout title={`Tag: ${pageContext.name}`}>
       <Flex
         sx={{
           alignItems: `center`,
@@ -67,7 +66,3 @@ const Tag = ({ data, pageContext }: MBTagProps) => {
 };
 
 export default Tag;
-
-export const Head: HeadFC<unknown, { name: string }> = ({ pageContext }) => (
-  <Seo title={`Tag: ${pageContext.name}`} />
-);

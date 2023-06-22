@@ -24,11 +24,11 @@ const Tags = ({ data }: MBTagsProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const list = data?.list?.group;
   const { t } = useTranslation('tags');
-
+  const title = t('Tags');
   return (
-    <Layout>
+    <Layout title={title}>
       <Heading as="h1" variant="styles.h1">
-        {t('Tags')}
+        {title}
       </Heading>
       <Box mt={[4, 5]}>
         {list.map((listItem) => (
@@ -54,5 +54,3 @@ const Tags = ({ data }: MBTagsProps) => {
 };
 
 export default Tags;
-
-export const Head: HeadFC = () => <Seo title="Теги" />;
