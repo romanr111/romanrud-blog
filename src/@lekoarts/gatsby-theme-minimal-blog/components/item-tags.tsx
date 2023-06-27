@@ -11,12 +11,11 @@ type TagsProps = {
     name: string;
     slug: string;
   }[];
-  ns?: string;
 };
 
-const ItemTags = ({ tags, ns }: TagsProps) => {
+const ItemTags = ({ tags }: TagsProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
-  const { t } = useTranslation(ns);
+  const { t } = useTranslation('tags');
 
   return (
     <React.Fragment>
@@ -29,7 +28,7 @@ const ItemTags = ({ tags, ns }: TagsProps) => {
               sx={(t) => ({ ...t.styles?.a })}
               to={replaceSlashes(`/${basePath}/${tagsPath}/${tag.slug}`)}
             >
-              {ns ? t(i18nKey) : tag.name}
+              {t(i18nKey)}
             </Link>
           </React.Fragment>
         );

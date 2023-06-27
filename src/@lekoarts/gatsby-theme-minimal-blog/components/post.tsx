@@ -85,7 +85,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
         {post.tags && (
           <React.Fragment>
             {` — `}
-            <ItemTags ns={ns} tags={post.tags} />
+            <ItemTags tags={post.tags} />
           </React.Fragment>
         )}
         {post.timeToRead && ` — `}
