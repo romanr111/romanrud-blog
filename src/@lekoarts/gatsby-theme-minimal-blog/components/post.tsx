@@ -7,7 +7,6 @@ import ItemTags from './item-tags';
 import Seo from './seo';
 import PostFooter from './post-footer';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-//import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 export type MBPostProps = {
   post: {

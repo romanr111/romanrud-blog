@@ -28,9 +28,8 @@ const Blog = (props: MBBlogProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig();
   const { allPost } = props?.data;
   const { t } = useTranslation('blog.index');
-  const title = t('title');
   return (
-    <Layout title={title}>
+    <Layout>
       <Flex
         sx={{
           alignItems: `center`,
@@ -39,7 +38,7 @@ const Blog = (props: MBBlogProps) => {
         }}
       >
         <Heading as="h1" variant="styles.h1" sx={{ marginY: 2 }}>
-          {t('Блог')}
+          {t('blog_title')}
         </Heading>
         <Link
           sx={(t) => ({
@@ -49,7 +48,7 @@ const Blog = (props: MBBlogProps) => {
           })}
           to={replaceSlashes(`/${basePath}/${tagsPath}`)}
         >
-          {t('all_tags')}
+          {t('blog_all_tags')}
         </Link>
       </Flex>
       <Listing posts={allPost?.nodes} sx={{ mt: [4, 5] }} />

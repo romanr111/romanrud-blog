@@ -1,7 +1,9 @@
 {
-  "Обзор книги": "Book review",
-  "Развитие личности": "Personal development",
-  "CeFi": "Cefi",
+  "Tag": "Tag",
   "Tags": "Tags",
-  "view_all_tags": "View all tags"
+  "view_all_tags": "View all tags",
+
+
+  "Обзор книги": "Book review",
+  "Развитие личности": "Personal development"
 }

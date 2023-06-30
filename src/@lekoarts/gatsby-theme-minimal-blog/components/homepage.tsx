@@ -52,7 +52,7 @@ const Homepage = ({ data }: MBHomepageProps) => {
       >
         <Hero />
       </section>
-      <Title text={t('hero_recent_posts')}>
+      <Title text={t('home_recent_posts')}>
         <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>
           {t('see_all')}
         </Link>

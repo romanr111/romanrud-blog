@@ -16,15 +16,15 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     // Used for the title template on pages other than the index site
-    siteTitle: 'Roman Rud Blog',
+    siteTitle: 'site_headline',
     // Default title of the page
-    siteTitleAlt: 'Roman Rud Blog',
+    siteTitleAlt: 'site_headline',
     // Can be used for e.g. JSONLD
-    siteHeadline: 'Roman Rud Blog',
+    siteHeadline: 'site_headline',
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: 'https://romanrud.com',
     // Used for SEO
-    siteDescription: 'Roman Rud Personal Blog',
+    siteDescription: 'seo_site_description',
     // Will be set on the <html /> tag
     siteLanguage: 'en',
     // Used for og:image and must be placed inside the 'static' folder
@@ -76,7 +76,7 @@ const config: GatsbyConfig = {
         i18n: true,
         navigation: [
           {
-            title: 'Блог',
+            title: 'navigation_blog_btn',
             slug: '/blog',
           },
         ],

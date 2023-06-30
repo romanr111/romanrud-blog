@@ -38,7 +38,7 @@ const Tag = ({ data, pageContext }: MBTagProps) => {
   const { t } = useTranslation('tags');
 
   return (
-    <Layout title={`Tag: ${pageContext.name}`}>
+    <Layout title={`${t('Tag')}: ${pageContext.name}`}>
       <Flex
         sx={{
           alignItems: `center`,
