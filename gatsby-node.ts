@@ -1,4 +1,21 @@
-import { GatsbyNode } from 'gatsby';
+import { CreateResolversArgs, GatsbyNode, Node } from 'gatsby';
+
+interface Frontmatter {
+  ns: string | null;
+}
+
+interface MdxNode extends Node {
+  parent: string;
+  frontmatter: Frontmatter;
+}
+
+interface Resolvers {
+  [key: string]: {
+    ns: {
+      resolve: (source: MdxNode) => string | null;
+    };
+  };
+}
 
 export const onCreatePage: GatsbyNode['onCreatePage'] = async ({
   page,
@@ -16,4 +33,66 @@ export const onCreatePage: GatsbyNode['onCreatePage'] = async ({
     deletePage(oldPage);
     createPage(page);
   }
+};
+
+export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] =
+  ({ actions }) => {
+    const { createTypes } = actions;
+    const typeDefs = `
+    extend type Post {
+      ns: String
+    }
+
+    extend type MdxPost {
+      ns: String
+    }
+
+     extend type Page  {
+      ns: String
+    }
+
+    extend type  MdxPage {
+      ns: String
+    }
+    
+  `;
+    createTypes(typeDefs);
+  };
+
+export const createResolvers: GatsbyNode['createResolvers'] = ({
+  createResolvers,
+  getNode,
+}: CreateResolversArgs) => {
+  const resolvers: Resolvers = {
+    MdxPage: {
+      ns: {
+        resolve: (source) => {
+          if (source.parent) {
+            const parent = getNode(source.parent);
+            if (parent && parent.internal.type === 'Mdx') {
+              const mdxParent = parent as MdxNode;
+              return mdxParent.frontmatter?.ns || null;
+            }
+          }
+          return null;
+        },
+      },
+    },
+    MdxPost: {
+      ns: {
+        resolve: (source) => {
+          if (source.parent) {
+            const parent = getNode(source.parent);
+            if (parent && parent.internal.type === 'Mdx') {
+              const mdxParent = parent as MdxNode;
+              return mdxParent.frontmatter?.ns || null;
+            }
+          }
+          return null;
+        },
+      },
+    },
+  };
+
+  createResolvers(resolvers);
 };

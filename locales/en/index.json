@@ -1,5 +1,15 @@
 {
-  "title": "Your Search For Better Sleep Ends Here",
-  "hello": "привіт",
-  "Roman Rud Blog": "Roman Rud Blog"
+  "site_headline": "Roman Rud",
+  "seo_site_title": "Roman Rud Blog",
+  "seo_default_site_title": "Roman Rud Blog",
+  "seo_site_description": "Roman Rud Personal Blog",
+
+  
+  "navigation_blog_btn": "Blog",
+
+
+  "brief_content": "Brief content",
+  "book_summary": "Summary of the book",
+  "learn_key_ideas": "Learn key ideas and lessons from books in 5 minutes.",
+  "bug": "homepage footer bug"
 }

@@ -1,9 +1,11 @@
 /** @jsx jsx */
 import { jsx, Link } from "theme-ui"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
 const Footer = () => {
   const { siteTitle } = useSiteMetadata()
+  const { t } = useTranslation();
 
   return (
     <footer
@@ -21,7 +23,7 @@ const Footer = () => {
       }}
     >
       <div>
-        &copy; {new Date().getFullYear()} by {siteTitle}. All rights reserved.
+        &copy; {new Date().getFullYear()} by {t(siteTitle)}. All rights reserved.
       </div>
       <div>
         <Link

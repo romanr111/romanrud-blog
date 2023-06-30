@@ -4,7 +4,7 @@ import { jsx } from "theme-ui";
 import { Link } from "gatsby";
 import useMinimalBlogConfig from "../hooks/use-minimal-blog-config";
 import replaceSlashes from "../utils/replaceSlashes";
-import { useI18next } from "gatsby-plugin-react-i18next";
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 
 type NavigationProps = {
   nav: {
@@ -13,7 +13,10 @@ type NavigationProps = {
   }[];
 };
 
+// Navigation bar, uses data from gatsby-config.ts, navigation array;
+// Line 48 works only for the blog page /uk/blog/
 const Navigation = ({ nav }: NavigationProps) => {
+  const { t } = useTranslation();
   const { basePath: basePath_ } = useMinimalBlogConfig();
   const { language, i18n } = useI18next();
   const isDefaultLanguage =
@@ -43,7 +46,7 @@ const Navigation = ({ nav }: NavigationProps) => {
                 }}
                 to={replaceSlashes(`${basePath}/${item.slug}`)}
               >
-                {item.title}
+                {t(item.title)} 
               </Link>
             );
           })}

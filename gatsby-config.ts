@@ -1,5 +1,8 @@
 import type { GatsbyConfig, PluginRef } from 'gatsby';
 import 'dotenv/config';
+import i18nextConfig from './i18next-config';
+
+const { defaultLanguage, languages, ns } = i18nextConfig;
 
 const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 const siteUrl =
@@ -13,15 +16,15 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     // Used for the title template on pages other than the index site
-    siteTitle: 'Roman Rud Blog',
+    siteTitle: 'site_headline',
     // Default title of the page
-    siteTitleAlt: 'Roman Rud Blog',
+    siteTitleAlt: 'site_headline',
     // Can be used for e.g. JSONLD
-    siteHeadline: 'Roman Rud Blog',
+    siteHeadline: 'site_headline',
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: 'https://romanrud.com',
     // Used for SEO
-    siteDescription: 'Roman Rud Personal Blog',
+    siteDescription: 'seo_site_description',
     // Will be set on the <html /> tag
     siteLanguage: 'en',
     // Used for og:image and must be placed inside the 'static' folder
@@ -42,17 +45,20 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages: ['uk', 'ru', 'en'], // Add your supported languages here
-        defaultLanguage: 'en', // Set your default language
+        languages, // Add your supported languages here
+        defaultLanguage, // Set your default language
         redirect: true, // Set to true if you want to redirect to the user's preferred language
         siteUrl, // Update with your website URL
         trailingSlash: 'always',
         i18nextOptions: {
-          fallbackLng: 'en',
+          defaultNS: 'index',
+          ns,
+          fallbackLng: defaultLanguage,
           interpolation: {
             escapeValue: false, // React already escapes values, so no need to escape again
           },
-          keySeparator: false,
+          // debug: true,
+          keySeparator: '.',
           nsSeparator: false,
         },
       },
@@ -70,7 +76,7 @@ const config: GatsbyConfig = {
         i18n: true,
         navigation: [
           {
-            title: 'Блог',
+            title: 'navigation_blog_btn',
             slug: '/blog',
           },
         ],
@@ -228,6 +234,7 @@ const config: GatsbyConfig = {
         openAnalyzer: false,
       },
     },
+    `gatsby-plugin-react-helmet`,
   ].filter(Boolean) as Array<PluginRef>,
 };
 
