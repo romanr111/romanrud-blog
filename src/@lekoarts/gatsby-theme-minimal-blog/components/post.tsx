@@ -48,6 +48,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
   const ns = post?.ns;
   const isTranslationEnabled = !!ns;
   const { t } = useTranslation(ns);
+  const { t: tCommon } = useTranslation('common');
   const firstTag = post.tags && post.tags[0];
   const isBookReview = firstTag && firstTag.name === 'Обзор книги';
 
@@ -90,7 +91,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
         {post.timeToRead && ` — `}
         {post.timeToRead && (
           <span>
-            {post.timeToRead} {isTranslationEnabled ? t('min_read') : ''}
+            {post.timeToRead} {tCommon('blog.min_read')}
           </span>
         )}
       </p>

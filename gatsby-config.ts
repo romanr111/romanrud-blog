@@ -45,29 +45,34 @@ const config: GatsbyConfig = {
       resolve: 'gatsby-plugin-react-i18next',
       options: {
         localeJsonSourceName: 'locale',
-        languages, // Add your supported languages here
-        defaultLanguage, // Set your default language
-        redirect: true, // Set to true if you want to redirect to the user's preferred language
-        siteUrl, // Update with your website URL
-        trailingSlash: 'always',
+        languages,
+        defaultLanguage,
+        redirect: true,
         i18nextOptions: {
-          defaultNS: 'index',
-          ns,
+          debug: process.env.NODE_ENV === 'development',
           fallbackLng: defaultLanguage,
+          supportedLngs: languages,
+          defaultNS: 'common',
           interpolation: {
-            escapeValue: false, // React already escapes values, so no need to escape again
+            escapeValue: false,
           },
-          // debug: true,
-          keySeparator: '.',
-          nsSeparator: false,
+          detection: {
+            order: ['path', 'cookie', 'navigator'],
+            caches: ['cookie'],
+            cookieMinutes: 160,
+          },
         },
+        pages: [
+          {
+            matchPath: '/:lang?/blog/:uid',
+            getLanguageFromPath: true,
+          },
+          {
+            matchPath: '/:lang?/books/:uid',
+            getLanguageFromPath: true,
+          },
+        ],
       },
-      pages: [
-        {
-          matchPath: '/:lang?/404',
-          getLanguageFromPath: false,
-        },
-      ],
     },
     {
       resolve: '@lekoarts/gatsby-theme-minimal-blog',
