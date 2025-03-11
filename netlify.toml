@@ -1,13 +1,14 @@
 [build]
   command = "gatsby build"
   publish = "public"
-  environment = { NODE_VERSION = "16", GATSBY_CPU_COUNT = "1" }
 
+# Environment variables
 [build.environment]
-  # Add environment variable to skip problematic operations
-  LMDB_PRELOAD_THREADS = "0"
+  NODE_VERSION = "18"
+  GATSBY_CPU_COUNT = "1"
   NODE_OPTIONS = "--max_old_space_size=4096"
 
+# Edge function configuration  
 [[edge_functions]]
   path = "/*"
   function = "language-redirect" 

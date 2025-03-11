@@ -9,14 +9,8 @@ export default async (request, context) => {
       return;
     }
     
-    // Skip redirect for static assets and API calls
-    if (
-      path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/) ||
-      path.includes("/static/") ||
-      path.includes("/page-data/") ||
-      path.includes("/__") ||
-      path.includes("/api/")
-    ) {
+    // Skip redirect for static assets
+    if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
       return;
     }
     
@@ -32,10 +26,10 @@ export default async (request, context) => {
       language = 'ru';
     }
     
-    // Only redirect if not English (since English is at root)
+    // Only redirect if not English
     if (language !== 'en') {
       // Create the redirect URL
-      const redirectUrl = `/${language}${path === '/' ? '' : path}${url.search || ''}`;
+      const redirectUrl = `/${language}${path === '/' ? '' : path}`;
       
       // Return a redirect response
       return Response.redirect(new URL(redirectUrl, request.url), 302);
