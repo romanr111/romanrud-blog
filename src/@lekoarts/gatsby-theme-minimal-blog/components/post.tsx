@@ -11,6 +11,11 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 export type MBPostProps = {
   post: {
     slug: string;
+    localizedSlug?: {
+      en: string;
+      uk: string;
+      ru: string;
+    };
     title: string;
     date: string;
     tags?: {
@@ -47,7 +52,7 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
   const post = data?.post;
   const ns = post?.ns;
   const isTranslationEnabled = !!ns;
-  const { t } = useTranslation(ns);
+  const { t, i18n } = useTranslation(ns);
   const { t: tCommon } = useTranslation('common');
   const firstTag = post.tags && post.tags[0];
   const isBookReview = firstTag && firstTag.name === 'Обзор книги';
@@ -62,14 +67,19 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
       )}`
     : post.excerpt;
 
+  // Get the localized slug for the current language
+  const currentSlug = post.localizedSlug?.[i18n.language as keyof typeof post.localizedSlug] || post.slug;
+
   return (
-    <Layout
-      title={title}
-      description={description}
-      image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
-      pathname={post.slug}
-      canonicalUrl={post.canonicalUrl}
-    >
+    <Layout>
+      <Seo
+        title={title}
+        description={description}
+        image={post.banner ? post.banner.childImageSharp.resize.src : undefined}
+        pathname={currentSlug}
+        canonicalUrl={post.canonicalUrl}
+        localizedUrls={post.localizedSlug}
+      />
       <Heading as="h1" variant="styles.h1">
         {isTranslationEnabled ? t('title') : post.title}
       </Heading>
