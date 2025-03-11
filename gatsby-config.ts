@@ -47,7 +47,7 @@ const config: GatsbyConfig = {
         localeJsonSourceName: 'locale',
         languages,
         defaultLanguage,
-        redirect: true,
+        redirect: false,
         i18nextOptions: {
           debug: process.env.NODE_ENV === 'development',
           fallbackLng: defaultLanguage,
@@ -57,7 +57,7 @@ const config: GatsbyConfig = {
             escapeValue: false,
           },
           detection: {
-            order: ['path', 'cookie', 'navigator'],
+            order: ['path', 'cookie'],
             caches: ['cookie'],
             cookieMinutes: 160,
           },
