@@ -1,15 +1,23 @@
 export default async (request, context) => {
   try {
-    // Get the current URL path
+    // Get the current URL
     const url = new URL(request.url);
     const path = url.pathname;
     
-    // Skip redirect if already accessing a language path
-    if (path.match(/^\/(uk|ru|en)\//)) {
+    // Extract path segments
+    const pathSegments = path.split('/').filter(segment => segment);
+    
+    // Check if the URL already has a language code
+    // This handles both /uk and /uk/
+    const firstSegment = pathSegments[0] || '';
+    const hasLanguagePrefix = ['uk', 'ru', 'en'].includes(firstSegment);
+    
+    // If we already have a language path, don't redirect
+    if (hasLanguagePrefix) {
       return;
     }
     
-    // Skip redirect for static assets
+    // Skip redirect for assets
     if (path.match(/\.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$/)) {
       return;
     }
@@ -29,7 +37,7 @@ export default async (request, context) => {
     // Only redirect if not English
     if (language !== 'en') {
       // Create the redirect URL
-      const redirectUrl = `/${language}${path === '/' ? '' : path}`;
+      const redirectUrl = `/${language}${path}`;
       
       // Return a redirect response
       return Response.redirect(new URL(redirectUrl, request.url), 302);
