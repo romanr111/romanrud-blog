@@ -123,7 +123,7 @@ const Seo = ({
       htmlAttributes={{ lang: finalLanguage }}
       title={finalTitle}
       defaultTitle={String(defaultTitle)}
-      titleTemplate={`%s | ${finalSiteTitle}`}
+      titleTemplate={finalTitle.includes(finalSiteTitle) ? `%s` : `%s | ${finalSiteTitle}`}
       meta={metaTags}
       link={linkTags}
     >

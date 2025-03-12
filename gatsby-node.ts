@@ -80,7 +80,7 @@ interface GatsbyGraphQLResult<T> {
   data?: T;
 }
 
-interface AllMdxResult {
+interface SimpleQueryResult {
   allMdx: {
     nodes: Array<{
       id: string;
@@ -88,11 +88,7 @@ interface AllMdxResult {
         contentFilePath: string;
       };
       frontmatter?: {
-        slug?: {
-          en: string;
-          uk: string;
-          ru: string;
-        };
+        slug?: string;
       };
     }>;
   };
@@ -101,7 +97,7 @@ interface AllMdxResult {
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql<AllMdxResult>(`
+  const result = await graphql<SimpleQueryResult>(`
     {
       allMdx {
         nodes {
@@ -110,11 +106,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
             contentFilePath
           }
           frontmatter {
-            slug {
-              en
-              uk
-              ru
-            }
+            slug
           }
         }
       }
@@ -140,28 +132,22 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
   
   posts.forEach((node) => {
     if (!node?.frontmatter?.slug) {
-      reporter.warn(`Post node ${node.id} has no localized slugs in frontmatter`);
+      reporter.warn(`Post node ${node.id} has no slug in frontmatter`);
       return;
     }
 
-    const slugs = node.frontmatter.slug;
+    const slug = node.frontmatter.slug;
 
     languages.forEach((lang) => {
-      const localizedSlug = slugs[lang];
-      if (!localizedSlug) {
-        reporter.warn(`Post node ${node.id} has no slug for language ${lang}`);
-        return;
-      }
-
       // Always include language prefix in path, even for English
-      const path = `/${lang}${localizedSlug}`;
+      const path = `/${lang}${slug}`;
       
       createPage({
         path,
         component: postTemplate,
         context: {
           id: node.id,
-          slug: localizedSlug,
+          slug: slug,
           language: lang,
           formatString: 'MMMM DD, YYYY',
         },
@@ -170,11 +156,11 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
       // For English, create an additional page without language prefix for backward compatibility
       if (lang === 'en') {
         createPage({
-          path: localizedSlug,
+          path: slug,
           component: postTemplate,
           context: {
             id: node.id,
-            slug: localizedSlug,
+            slug: slug,
             language: lang,
             formatString: 'MMMM DD, YYYY',
           },

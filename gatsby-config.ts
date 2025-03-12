@@ -16,11 +16,11 @@ const config: GatsbyConfig = {
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-minimal-blog/gatsby-config.mjs
     // Used for the title template on pages other than the index site
-    siteTitle: 'site_headline',
+    siteTitle: 'Roman Rud',
     // Default title of the page
-    siteTitleAlt: 'site_headline',
+    siteTitleAlt: 'Roman Rud | Personal Blog',
     // Can be used for e.g. JSONLD
-    siteHeadline: 'site_headline',
+    siteHeadline: 'Roman Rud | Personal Blog',
     // Will be used to generate absolute URLs for og:image etc.
     siteUrl: 'https://romanrud.com',
     // Used for SEO
