@@ -1,4 +1,5 @@
-import { CreateResolversArgs, GatsbyNode, Node } from 'gatsby';
+import { CreateResolversArgs, GatsbyNode } from 'gatsby';
+import path from 'path';
 
 interface Frontmatter {
   ns?: string;
@@ -10,11 +11,52 @@ interface Frontmatter {
 }
 
 interface MdxNode {
+  id: string;
   internal: {
     type: string;
+    contentFilePath: string;
   };
   frontmatter?: Frontmatter;
   parent?: string;
+}
+
+interface QueryResult {
+  allMdx: {
+    nodes: Array<MdxNode>;
+  };
+}
+
+interface Tag {
+  name: string
+  slug: string
+}
+
+interface Post {
+  id: string
+  slug: string
+  title: string
+  date: Date
+  tags: Tag[]
+  description?: string
+  canonicalUrl?: string
+  excerpt: string
+  timeToRead: number
+  banner?: {
+    childImageSharp: {
+      resize: {
+        src: string
+      }
+    }
+  }
+  ns?: string
+}
+
+interface MdxPost extends Post {
+  localizedSlug: {
+    en: string
+    uk: string
+    ru: string
+  }
 }
 
 interface Resolvers {
@@ -33,27 +75,40 @@ interface Resolvers {
   };
 }
 
+interface GatsbyGraphQLResult<T> {
+  errors?: any;
+  data?: T;
+}
+
+interface AllMdxResult {
+  allMdx: {
+    nodes: Array<{
+      id: string;
+      internal: {
+        contentFilePath: string;
+      };
+      frontmatter?: {
+        slug?: {
+          en: string;
+          uk: string;
+          ru: string;
+        };
+      };
+    }>;
+  };
+}
+
 export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
 
-  const result = await graphql<{
-    allMdx: {
-      nodes: Array<{
-        id: string;
-        frontmatter?: {
-          slug?: {
-            en: string;
-            uk: string;
-            ru: string;
-          };
-        };
-      }>;
-    };
-  }>(`
+  const result = await graphql<AllMdxResult>(`
     {
-      allMdx(filter: {frontmatter: {slug: {ne: null}}}) {
+      allMdx {
         nodes {
           id
+          internal {
+            contentFilePath
+          }
           frontmatter {
             slug {
               en
@@ -68,33 +123,63 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions,
 
   if (result.errors) {
     reporter.panicOnBuild('Error loading MDX result', result.errors);
+    return;
+  }
+
+  if (!result.data?.allMdx?.nodes) {
+    reporter.warn('No MDX nodes found');
+    return;
   }
 
   // Create blog posts pages
-  const posts = result.data?.allMdx.nodes || [];
+  const posts = result.data.allMdx.nodes;
+  const postTemplate = path.resolve('./src/@lekoarts/gatsby-theme-minimal-blog-core/templates/post-query.tsx');
 
   // Create pages for each language version
-  const languages = ['en', 'uk', 'ru'];
+  const languages = ['en', 'uk', 'ru'] as const;
   
   posts.forEach((node) => {
-    const slugs = node.frontmatter?.slug;
-    if (!slugs) return;
+    if (!node?.frontmatter?.slug) {
+      reporter.warn(`Post node ${node.id} has no localized slugs in frontmatter`);
+      return;
+    }
+
+    const slugs = node.frontmatter.slug;
 
     languages.forEach((lang) => {
-      const localizedSlug = slugs[lang as keyof typeof slugs];
-      if (!localizedSlug) return;
+      const localizedSlug = slugs[lang];
+      if (!localizedSlug) {
+        reporter.warn(`Post node ${node.id} has no slug for language ${lang}`);
+        return;
+      }
 
-      const path = lang === 'en' ? localizedSlug : `/${lang}${localizedSlug}`;
+      // Always include language prefix in path, even for English
+      const path = `/${lang}${localizedSlug}`;
       
       createPage({
         path,
-        component: require.resolve('./src/@lekoarts/gatsby-theme-minimal-blog-core/templates/post-query.tsx'),
+        component: postTemplate,
         context: {
           id: node.id,
           slug: localizedSlug,
           language: lang,
+          formatString: 'MMMM DD, YYYY',
         },
       });
+
+      // For English, create an additional page without language prefix for backward compatibility
+      if (lang === 'en') {
+        createPage({
+          path: localizedSlug,
+          component: postTemplate,
+          context: {
+            id: node.id,
+            slug: localizedSlug,
+            language: lang,
+            formatString: 'MMMM DD, YYYY',
+          },
+        });
+      }
     });
   });
 };
@@ -127,21 +212,55 @@ export const createSchemaCustomization: GatsbyNode['createSchemaCustomization'] 
       ru: String
     }
 
-    extend type Post {
+    type PostTag {
+      name: String!
+      slug: String!
+    }
+
+    type MdxFrontmatter {
+      title: String!
+      date: Date! @dateformat
+      slug: LocalizedSlug
+      description: String
+      tags: [String!]!
+      banner: String
       ns: String
+    }
+
+    interface Post implements Node {
+      id: ID!
+      slug: String!
+      title: String!
+      date: Date! @dateformat
+      tags: [PostTag!]!
+      description: String
+      canonicalUrl: String
+      excerpt: String!
+      timeToRead: Float!
+      banner: File @fileByRelativePath
+      ns: String
+    }
+
+    type MdxPost implements Node & Post {
+      id: ID!
+      slug: String!
+      title: String!
+      date: Date! @dateformat
+      tags: [PostTag!]!
+      description: String
+      canonicalUrl: String
+      excerpt: String!
+      timeToRead: Float!
+      banner: File @fileByRelativePath
       localizedSlug: LocalizedSlug
-    }
-
-    extend type MdxPost {
-      ns: String
-      localizedSlug: LocalizedSlug
-    }
-
-    extend type Page {
       ns: String
     }
 
-    extend type MdxPage {
+    type Page implements Node {
+      ns: String
+    }
+
+    type MdxPage implements Node {
       ns: String
     }
   `;

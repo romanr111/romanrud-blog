@@ -50,12 +50,16 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
   children,
 }) => {
   const post = data?.post;
-  const ns = post?.ns;
+  if (!post) {
+    return null;
+  }
+
+  const ns = post.ns;
   const isTranslationEnabled = !!ns;
   const { t, i18n } = useTranslation(ns);
   const { t: tCommon } = useTranslation('common');
-  const firstTag = post.tags && post.tags[0];
-  const isBookReview = firstTag && firstTag.name === 'Обзор книги';
+  const firstTag = post.tags?.[0];
+  const isBookReview = firstTag?.name === 'Обзор книги';
 
   const title = isBookReview
     ? `${t('brief_content')} - ${t('title')}`

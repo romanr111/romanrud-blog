@@ -17,14 +17,13 @@ type NavigationProps = {
 // Line 48 works only for the blog page /uk/blog/
 const Navigation = ({ nav }: NavigationProps) => {
   const { t } = useTranslation();
-  const { basePath: basePath_ } = useMinimalBlogConfig();
-  const { language, i18n } = useI18next();
-  const isDefaultLanguage =
-    Array.isArray(i18n.options.fallbackLng) &&
-    i18n.options.fallbackLng?.includes(language);
-  const basePath = isDefaultLanguage
-    ? `/${basePath_}`
-    : `/${basePath_}/${language}`;
+  const { basePath } = useMinimalBlogConfig();
+  const { language } = useI18next();
+
+  const getLocalizedPath = (slug: string) => {
+    const path = replaceSlashes(`/${basePath}/${slug}`);
+    return language === 'en' ? path : `/${language}${path}`;
+  };
 
   return (
     <React.Fragment>
@@ -36,20 +35,16 @@ const Navigation = ({ nav }: NavigationProps) => {
             ".active": { color: `heading` },
           }}
         >
-          {nav.map((item) => {
-            return (
-              <Link
-                key={item?.title}
-                activeClassName="active"
-                sx={(t) => {
-                  return { ...t.styles?.a };
-                }}
-                to={replaceSlashes(`${basePath}/${item.slug}`)}
-              >
-                {t(item.title)} 
-              </Link>
-            );
-          })}
+          {nav.map((item) => (
+            <Link
+              key={item.title}
+              activeClassName="active"
+              sx={(t) => ({ ...t.styles?.a })}
+              to={getLocalizedPath(item.slug)}
+            >
+              {t(item.title)}
+            </Link>
+          ))}
         </nav>
       )}
     </React.Fragment>

@@ -47,7 +47,7 @@ const config: GatsbyConfig = {
         localeJsonSourceName: 'locale',
         languages,
         defaultLanguage,
-        redirect: false,
+        redirect: true,
         i18nextOptions: {
           debug: process.env.NODE_ENV === 'development',
           fallbackLng: defaultLanguage,
@@ -57,7 +57,7 @@ const config: GatsbyConfig = {
             escapeValue: false,
           },
           detection: {
-            order: ['path', 'cookie'],
+            order: ['path', 'htmlTag', 'cookie', 'navigator'],
             caches: ['cookie'],
             cookieMinutes: 160,
           },
@@ -66,10 +66,12 @@ const config: GatsbyConfig = {
           {
             matchPath: '/:lang?/blog/:uid',
             getLanguageFromPath: true,
+            excludeLanguages: []
           },
           {
             matchPath: '/:lang?/books/:uid',
             getLanguageFromPath: true,
+            excludeLanguages: []
           },
         ],
       },
