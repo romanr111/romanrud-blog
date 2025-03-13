@@ -7,6 +7,13 @@ export const query = graphql`
   query ($slug: String!, $formatString: String!, $language: String!) {
     post(slug: { eq: $slug }) {
       slug
+      ... on MdxPost {
+        localizedSlug {
+          en
+          uk
+          ru
+        }
+      }
       title
       date(formatString: $formatString)
       tags {

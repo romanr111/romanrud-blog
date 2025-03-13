@@ -1,0 +1,14 @@
+[build]
+  command = "gatsby build"
+  publish = "public"
+
+# Environment variables
+[build.environment]
+  NODE_VERSION = "18"
+  GATSBY_CPU_COUNT = "1"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+
+# Edge function configuration  
+[[edge_functions]]
+  path = "/*"
+  function = "language-redirect" 

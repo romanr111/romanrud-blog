@@ -11,6 +11,7 @@ type TranslationProps = {
   wrapperTag?: ElementType;
   wrapperProps?: React.HTMLAttributes<HTMLElement>;
   children?: ReactNode;
+  raw?: boolean;
 };
 
 const pTagStyles = { mt: '20px', mb: '20px' };
@@ -23,9 +24,15 @@ const Translation = ({
   altTextId,
   wrapperProps,
   children,
+  raw = false,
   ...props
 }: TranslationProps) => {
   const { t } = useTranslation(ns);
+  
+  if (raw) {
+    return t(id);
+  }
+
   const isPtag = tag === 'p';
 
   const styles = (t: Theme) => {
