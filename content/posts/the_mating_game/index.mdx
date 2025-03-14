@@ -10,9 +10,9 @@ ns: "blog.the-mating-game"
 ---
 
 <div className="image-container">
-  <div className="image_item">
+    <div className="image_item">
     <Translation id="image_path" altTextId="title" tag="img" ns={props.data.post.ns} />
-  </div>
+    </div>
 </div>
 
 <style jsx>{`
@@ -21,7 +21,7 @@ ns: "blog.the-mating-game"
     height: 350px;
     margin: auto;
     position: relative;
-    margin-bottom: 170px;
+    margin-bottom: 200px;
     text-align: center;
   }
   .image-container img {
@@ -39,19 +39,17 @@ ns: "blog.the-mating-game"
 
 <Translation id="key_points_sum" tag="p" ns={props.data.post.ns} />
 
-<p><strong><Translation id="men_women_differences" ns={props.data.post.ns} /></strong></p>
+<h3><Translation id="men_women_differences" ns={props.data.post.ns} /></h3>
 
 <ul>
-  <li><Translation id="men_visual" tag="span" ns={props.data.post.ns} />
+  <li><strong><Translation id="men_visual" tag="span" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="men_visual_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="men_visual_subItem2" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
-  <li><Translation id="women_power" tag="span" ns={props.data.post.ns} />
+  <li><strong><Translation id="women_power" tag="span" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="women_power_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="women_power_subItem2" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="women_power_subItem3" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
@@ -63,7 +61,6 @@ ns: "blog.the-mating-game"
   <li><strong><Translation id="passion" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="passion_description1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="passion_description2" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="passion_description3" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="passion_description4" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="passion_description5" tag="span" ns={props.data.post.ns} /></li>
@@ -106,7 +103,7 @@ ns: "blog.the-mating-game"
 <div className="chart-container">
   <div className="chart_item">
     <img alt="Статистика разводов" src="/images/divorces_rate.png" />
-  </div>
+    </div>
 </div>
 
 <style jsx>{`
@@ -129,7 +126,7 @@ ns: "blog.the-mating-game"
 <div className="chart-container-wide">
   <div className="chart_item">
     <img alt="Статистика разводов после вступления в брак" src="/images/years_since_marriage_to_divorce.png" />
-  </div>
+    </div>
 </div>
 
 <style jsx>{`
@@ -138,7 +135,7 @@ ns: "blog.the-mating-game"
     height: 540px;
     margin: auto;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: -170px;
     text-align: center;
   }
   .chart-container-wide img {
@@ -153,41 +150,23 @@ ns: "blog.the-mating-game"
   <li><strong><Translation id="histocompatibility" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="histocompatibility_description1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="histocompatibility_description2" tag="span" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="histocompatibility_subItem1" tag="span" ns={props.data.post.ns} /></li>
-          <li><Translation id="histocompatibility_subItem2" tag="span" ns={props.data.post.ns} /></li>
-          <li><Translation id="histocompatibility_subItem3" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
     </ul>
   </li>
   <li><strong><Translation id="marriage" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="marriage_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="marriage_subItem2" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
   <li><strong><Translation id="modern_challenges" ns={props.data.post.ns} /></strong>
     <ul>
-      <li><Translation id="modern_challenges_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="modern_challenges_subItem2" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="modern_challenges_subItem3" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="modern_challenges_subItem4" tag="span" ns={props.data.post.ns} /></li>
+      <li><Translation id="modern_challenges_subItem2" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="modern_challenges_subItem5" tag="span" ns={props.data.post.ns} /></li>
-    </ul>
-  </li>
-  <li><strong><Translation id="feminized_society" ns={props.data.post.ns} /></strong>
-    <ul>
-      <li><Translation id="feminized_society_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="feminized_society_subItem2" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="feminized_society_subItem3" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="feminized_society_subItem4" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
 </ul>
 
-<h4><Translation id="women_want" ns={props.data.post.ns} /></h4>
+<h3><Translation id="women_want" ns={props.data.post.ns} /></h3>
 
 <ul>
   <li><strong><Translation id="women_want_resources" ns={props.data.post.ns} /></strong>
@@ -199,68 +178,15 @@ ns: "blog.the-mating-game"
   <li><strong><Translation id="women_love_first" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="women_love_first_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="women_love_first_subItem2" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
-  <li><strong><Translation id="ideal_partner_qualities" ns={props.data.post.ns} /></strong>
-    <ol>
-      <li><Translation id="quality_love" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="quality_love_subItem1" tag="span" ns={props.data.post.ns} /></li>
-          <li><Translation id="quality_love_subItem2" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
-      <li><Translation id="quality_fidelity" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="quality_fidelity_subItem1" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
-      <li><Translation id="quality_kindness" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="quality_kindness_subItem1" tag="span" ns={props.data.post.ns} /></li>
-          <li><Translation id="quality_kindness_subItem2" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
-      <li><Translation id="quality_commitment" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="quality_commitment_subItem1" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
-      <li><Translation id="quality_education" ns={props.data.post.ns} />
-        <ul>
-          <li><Translation id="quality_education_subItem1" tag="span" ns={props.data.post.ns} /></li>
-        </ul>
-      </li>
-    </ol>
-  </li>
 </ul>
-
-<p><strong><Translation id="attractive_qualities" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="attractive_humor" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_communication" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_cooking" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_dancing" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_safety" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_children" ns={props.data.post.ns} /></li>
-  <li><Translation id="attractive_health" ns={props.data.post.ns} /></li>
-</ol>
-
-<p><strong><Translation id="women_sex_conditions" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="women_sex_condition1" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_sex_condition2" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_sex_condition3" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_sex_condition4" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_sex_condition5" ns={props.data.post.ns} /></li>
-</ol>
 
 <ul>
   <li><strong><Translation id="emotional_vs_physical" ns={props.data.post.ns} /></strong></li>
   <li><strong><Translation id="foreplay_importance" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="foreplay_importance_subItem1" tag="span" ns={props.data.post.ns} /></li>
-      <li><Translation id="foreplay_importance_subItem2" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="foreplay_importance_subItem3" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="foreplay_importance_subItem4" tag="span" ns={props.data.post.ns} /></li>
     </ul>
@@ -268,7 +194,7 @@ ns: "blog.the-mating-game"
   <li><Translation id="dominant_men" tag="span" ns={props.data.post.ns} /></li>
 </ul>
 
-<h4><Translation id="men_want" ns={props.data.post.ns} /></h4>
+<h3><Translation id="men_want" ns={props.data.post.ns} /></h3>
 
 <ul>
   <li><strong><Translation id="men_brain" ns={props.data.post.ns} /></strong></li>
@@ -287,7 +213,6 @@ ns: "blog.the-mating-game"
   </li>
   <li><strong><Translation id="ugly_wife" ns={props.data.post.ns} /></strong>
     <ul>
-      <li><Translation id="ugly_wife_subItem1" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="ugly_wife_subItem2" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="ugly_wife_subItem3" tag="span" ns={props.data.post.ns} /></li>
     </ul>
@@ -303,17 +228,10 @@ ns: "blog.the-mating-game"
   </li>
 </ul>
 
-<p><Translation id="sex_tension" tag="span" ns={props.data.post.ns} /></p>
 
-<p><strong><Translation id="men_needs" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="men_need_fidelity" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_need_exclusivity" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_need_devotion" ns={props.data.post.ns} /></li>
-</ol>
-
+<h3><Translation id="men_needs" ns={props.data.post.ns} /></h3>
 <ul>
-  <li><Translation id="men_needs_explanation" tag="span" ns={props.data.post.ns} /></li>
+  <li><Translation id="men_need_fidelity" ns={props.data.post.ns} /></li>
 </ul>
 
 <h3><Translation id="one_night_stand" ns={props.data.post.ns} /></h3>
@@ -328,35 +246,15 @@ ns: "blog.the-mating-game"
   </li>
 </ul>
 
-<p><strong><Translation id="men_cheating_reasons" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="men_cheating_reason1" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason2" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason3" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason4" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason5" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason6" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason7" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason8" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason9" ns={props.data.post.ns} /></li>
-  <li><Translation id="men_cheating_reason10" ns={props.data.post.ns} /></li>
-</ol>
+<ul>
+  <li><strong><Translation id="men_cheating_reasons" ns={props.data.post.ns} /></strong></li>
+</ul>
 
-<p><strong><Translation id="women_affair_emotional" ns={props.data.post.ns} /></strong></p>
+<p></p>
 
-<p><strong><Translation id="women_affair_reasons" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="women_affair_reason1" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason2" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason3" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason4" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason5" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason6" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason7" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason8" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason9" ns={props.data.post.ns} /></li>
-  <li><Translation id="women_affair_reason10" ns={props.data.post.ns} /></li>
-</ol>
+<ul>
+  <li><strong><Translation id="women_affair_reasons" ns={props.data.post.ns} /></strong></li>
+</ul>
 
 <ul>
   <li><strong><Translation id="men_hide_affairs" ns={props.data.post.ns} /></strong>
@@ -367,32 +265,16 @@ ns: "blog.the-mating-game"
   <li><strong><Translation id="relationship_values" ns={props.data.post.ns} /></strong>
     <ul>
       <li><Translation id="relationship_values_subItem1" tag="span" ns={props.data.post.ns} /></li>
+      <li><Translation id="relationship_values_subItem2" tag="span" ns={props.data.post.ns} /></li>
     </ul>
   </li>
 </ul>
 
-<p><strong><Translation id="key_values" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="key_value1" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_value2" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_value3" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_value4" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_value5" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_value6" ns={props.data.post.ns} /></li>
-</ol>
-
-<p><strong><Translation id="key_beliefs" ns={props.data.post.ns} /></strong></p>
-<ol>
-  <li><Translation id="key_belief1" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_belief2" ns={props.data.post.ns} /></li>
-  <li><Translation id="key_belief3" ns={props.data.post.ns} /></li>
-</ol>
-
-<h4><Translation id="finding_partner" ns={props.data.post.ns} /></h4>
+<h3><Translation id="finding_partner" ns={props.data.post.ns} /></h3>
 
 <ul>
   <li><strong><Translation id="love_myth" ns={props.data.post.ns} /></strong></li>
-  <li><strong><Translation id="partner_list" ns={props.data.post.ns} /></strong>
+  <li><p><strong><Translation id="partner_list" ns={props.data.post.ns} /></strong></p>
     <ul>
       <li><Translation id="partner_list_subItem1" tag="span" ns={props.data.post.ns} /></li>
       <li><Translation id="partner_list_subItem2" tag="span" ns={props.data.post.ns} /></li>
@@ -407,9 +289,14 @@ ns: "blog.the-mating-game"
   </li>
 </ul>
 
-<p><Translation id="passion_importance" tag="span" ns={props.data.post.ns} /></p>
-
-<p><strong><Translation id="opposites_attract" ns={props.data.post.ns} /></strong></p>
+<ul>
+  <li>
+    <p><Translation id="passion_importance" tag="span" ns={props.data.post.ns} /></p>
+  </li>
+  <li>
+    <p><strong><Translation id="opposites_attract" ns={props.data.post.ns} /></strong></p>
+  </li>
+</ul>
 
 <Translation id="takeaway_heading" tag="h3" ns={props.data.post.ns} />
 
