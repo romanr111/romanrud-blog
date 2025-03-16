@@ -1,6 +1,9 @@
 {
   "min_read": "min read",
   "blog": {
-    "min_read": "min read"
+    "min_read": "min read",
+    "brief_content": "Brief content",
+    "book_summary": "Summary of the book",
+    "learn_key_ideas": "Learn key ideas and lessons from books in 5 minutes."
   }
 } 
