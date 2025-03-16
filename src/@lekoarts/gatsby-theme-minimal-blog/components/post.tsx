@@ -59,15 +59,19 @@ const Post: React.FC<React.PropsWithChildren<PageProps<MBPostProps>>> = ({
   const { t, i18n } = useTranslation(ns);
   const { t: tCommon } = useTranslation('common');
   const firstTag = post.tags?.[0];
-  const isBookReview = firstTag?.name === 'Обзор книги';
+  const isBookReview = firstTag?.name === 'Обзор книги' || 
+                       firstTag?.name === 'Book Review' || 
+                       firstTag?.name === 'Огляд книги';
 
-  const title = isBookReview
-    ? `${t('brief_content')} - ${t('title')}`
+  const title = isTranslationEnabled 
+    ? (isBookReview 
+        ? `${tCommon('blog.brief_content')} - ${t('title')}` 
+        : t('title'))
     : post.title;
 
   const description = isBookReview
-    ? `${t('book_summary')} ${t('description')} «${t('title')}». ${t(
-        'learn_key_ideas'
+    ? `${tCommon('blog.book_summary')} "${t('title')}" by ${t('description')}. ${tCommon(
+        'blog.learn_key_ideas'
       )}`
     : post.excerpt;
 
