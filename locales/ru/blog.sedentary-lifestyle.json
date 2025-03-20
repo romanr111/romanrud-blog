@@ -1,0 +1,178 @@
+{
+  "title": "Вся правда о сидячем образе жизни",
+  "description": "Вся правда о сидячем образе жизни",
+  "main_heading": "Что вы узнаете?",
+  "main_point1": "Как малоподвижный образ жизни влияет на ваше здоровье",
+  "main_point2": "Как минимизировать негативные последствия",
+  
+  "intro_text": "Человеческое тело создано для движения. Наши предки много трудились в поле, или часами охотились что бы добыть себе пищу. Но когда в нашу жизнь вошли телевидение, компьютеры и рутинная работа в офисе, люди стали проводить больше времени сидя, чем когда-либо в истории человечества: 7.7-9 часов в день, это даже больше, чем некоторые люди спят;",
+  
+  "personal_experience": "В моем случае так точно, в среднем я сижу 8 часов 44 минуты за компьютером в день. Но бывает и больше 9. Такой образ жизни, привел к определенным проблемам со здоровьем, которые и подтолкнули меня к исследованию и написанию этой статьи.",
+  
+  "image_alt": "Oura ring activity level",
+  "image_path": "/images/oura_activity.jpeg",
+  
+  "immediate_effects_heading": "Что происходит, когда вы сидите?",
+  "immediate_effects_title": "Сразу",
+  "immediate_effect1": "Отключается электрическая активность в мышцах ног;",
+  "immediate_effect2": "Сжигание калорий резко падает до одной в минуту.",
+  "immediate_effect3": "На ~50-60% меньше, чем когда вы стоите и на ~200% меньше чем при ходьбе;",
+  
+  "after_two_hours_title": "После 2х часов",
+  "after_two_hours_effect1": "Хороший холестерин падает 20%",
+  "after_two_hours_effect2": "Ухудшается толерантность к глюкозе (один из факторов риска диабета)",
+  
+  "harm_heading": "Как ваше кресло может вам навредить",
+  "harm_quote": "Вот, что пишет Джеймс Левин, профессор медицины в Mayo Clinic, одного из крупнейших частных медицинских и исследовательских центров мира: «Сидение опаснее курения, убивает больше людей, чем ВИЧ, и более коварно, чем прыжки с парашютом».",
+  
+  "harm_effect1": "Отсутствие физической активности было определено как четвертый по значимости фактор риска глобальной смертности (примерно 3,2 миллиона 6% смертей во всем мире).",
+  "harm_effect2": "Более того, отсутствие физической активности считается основной причиной примерно 21–25% случаев рака груди и толстой кишки, 27% диабета и примерно 30% ишемической болезни сердца.",
+  "harm_effect3": "Сидячий образ жизни увеличивает на 112% риск развития диабета 2 типа и на 147% увеличивает риск сердечных заболеваний;",
+  "harm_effect4": "Исследования показали, что ходьба менее 1500 шагов в день или длительное сидение без снижения потребления калорий может вызвать серьезное повышение инсулинорезистентности, которая является ключевым фактором диабета 2 типа;",
+  
+  "posture_heading": "Изменяется осанка и страдает позвоночник",
+  "posture_text1": "Когда вы слишком долго сидите, сила тяжести и усталость, как правило, берут свое, что приводит к наклоненной вперед голове, округлым плечам и наклоненной спине.",
+  "posture_text2": "Напряжение, возникающее при измененном положения тела, может привести к множеству различных проблем, таких как боль в шее / пояснице, образование триггерных точек и даже дегенерация диска.",
+  "posture_text3": "К тому же питание дисков происходит только при движении, поэтому увеличивается риск межпозвоночных грыж и протрузий;",
+  
+  "trigger_point_image_alt": "Триггерные точки в мышцах",
+  "trigger_point_image_path": "/images/trigger_point.jpeg",
+  
+  "trigger_point_text1": "Триггерная точка, как узел на верёвке – укорачивает мышцу и ослабляет её.",
+  "trigger_point_text2": "А теперь представьте позвоночник. Он окружённый мышечным корсетом. Что произойдёт с позвоночником, если триггерные точки возникнут в мышцах этого корсета? Совершенно ясно, что мышцы укоротятся, изогнув позвоночник, как тетива сгибает лук. И чем больше будет триггерных точек, тем сильнее укоротятся мышцы, и тем заметнее искривится позвоночник.",
+  "trigger_point_text3": "Внешне это будет выглядеть, как вынужденная поза. Согнувшийся от боли в спине человек — это и есть внешнее проявление мышечного укорочения, вызванного триггерными точками при миофасциальном синдроме.",
+  
+  "mood_heading": "Связь между здоровьем спины и настроением",
+  "mood_text1": "Как известно мозг потребляет 20% кислорода и поэтому через шею проходит огромное количество сосудов. Мышцы шеи впадая в гипертонус от постоянной нагрузки могут их пережимать, ухудшая кровообращение мозга. Поэтому многие заболевания психоэмоциональной сферы (неврозы) связаны с состоянием опорно-двигательной системы. В частности, с нарушением осанки.",
+  "mood_text2": "В добавок к этому, в ответ на отрицательные эмоции, рефлекторно, как результат врождённого поведенческого инстинкта, человек принимает так называемую пассивно-оборонительную позу. Она характеризуется приподнятыми и сведёнными вперёд плечами, опущенной и выдвинутой вперёд головой, сутулой спиной. Что еще больше ухудшает нормальное распределение нагрузки на мышцы и позвоночник.",
+  
+  "neck_strain_image_alt": "Нагрузка на шею при наклоне",
+  "neck_strain_image_path": "/images/smartfon_spina.jpeg",
+  
+  "weight_heading": "Сидя вы толстеете",
+  "weight_text1": "Полные люди проводят сидя всего на 2.5 часа больше времени, чем худые;",
+  "weight_text2": "В период между 1980 и 2000 люди стали сидеть на 8% больше, а количество полных людей удвоилось; Каждый третий американец имеет лишний вес;",
+  
+  "digestion_heading": "Ухудшение пищеварения",
+  "digestion_text": "Длительное сидение после еды может сдавливать брюшную полость, замедляя пищеварение, что может привести к различным проблемам, таким как изжога и запор.",
+  
+  "skin_heading": "Проблемы с кожей, ногтями и волосами",
+  "skin_text": "Поскольку при замедленном обмене веществ клетки не получают достаточного кровоснабжения, то и кожа страдает, становится сухой и тусклой. ногти в свою очередь становятся хрупкими, а волосы могут потерять упругость, стать ломкими и даже выпадать.",
+  
+  "exercise_heading": "Тренировки не панацея",
+  "exercise_text": "Вы можете подумать: «Но я тренируюсь несколько раз в неделю». Исследования показывают, что, хотя упражнения полезны, они не отменяют вреда, наносимого длительным сидением.",
+  
+  "standing_heading": "Что происходит, когда вы встаёте?",
+  "standing_immediate_title": "В течении 90 секунд:",
+  "standing_immediate_effect": "Реактивация нормального обмена холестерина, сахара в крови, и триглицеридов",
+  
+  "continue_standing_title": "Если продолжаете стоять:",
+  "continue_standing_effect1": "Уровень сахара в крови падает;",
+  "continue_standing_effect2": "Улучшается кровоток;",
+  "continue_standing_effect3": "Улучшается обмен веществ;",
+  
+  "solution_heading": "Выход из ситуации - Образ жизни, основанный на движении",
+  "solution_tip1": "Прерывайте положение сидя, как можно чаще;",
+  "solution_tip2": "Звонки, совещания делайте «на ногах».",
+  "solution_tip3": "Если едите на общественном траспорте — выйдите на одну остановку раньше и пройдитесь;",
+  "solution_tip4": "Поднимайтесь по ступенькам вместо лифта.",
+  "solution_tip5": "Используйте стол для работы стоя;",
+  "solution_tip6": "Монитор на уровне глаз; Сделайте модификации для вашего ноутбука/ПК, купите отдельную клавиатуру, мышку и подставку;",
+  
+  "steps_heading": "Сколько шагов нужно делать в день?",
+  "steps_text1": "Исследование 2011 года года показало, что 10 000 шагов в день — разумная цель для здоровых взрослых людей.",
+  
+  "activity_assessment_title": "Вы можете оценить вашу активность:",
+  "activity_low": "Неактивный: менее 5000 шагов в день",
+  "activity_medium": "Средняя активность: от 7500 до 9999 шагов в день.",
+  "activity_high": "Очень активный: более 12500 шагов в день",
+  
+  "conclusion_heading": "Заключающее слово",
+  "conclusion_text1": "Образ жизни человека существенно изменился, в течении нескольких сотен лет, что довольно не много в рамках человеческой эволюции. Начиная с индустриальной революции, когда ручной труд начали заменять машины и до появления компьютеров, когда ты можешь даже и не вставать целый день.",
+  "conclusion_text2": "В итоге люди перешли от активного образа жизни и редких перерывов в течении дня для того что бы сидеть, до редких перерывов для того, что бы ходить.",
+  "conclusion_text3": "Из-за отсутствия необходимости в физических нагрузках человек всё больше и больше времени проводит в неподвижных положениях. Без работы мышцы слабеют и постепенно атрофируются. Уменьшаются сила и выносливость, нарушаются нервно-рефлекторные связи, приводя к расстройству деятельности нервной системы (развиваются вегетососудистая дистония, депрессия, миофасциальные синдромы), нарушается обмен веществ.",
+  "conclusion_text4": "С течением времени из-за гиподинамии нарастают изменения со стороны опорно-двигательного аппарата: прогрессирующие уменьшается костная масса (развивается остеопороз), страдает функция периферических суставов (остеоартроз) и позвоночника (остеохондроз).",
+  "conclusion_text5": "Длительная гиподинамия приводит к сердечно-сосудистым заболеваниям (ишемическая болезнь сердца, артериальная гипертония) и пищеварения (нарушение функции кишечника).",
+  "conclusion_text6": "Цепь эндокринных нарушений вследствие гиподинамии проявляется метаболическим синдромом (ожирение, инсулинорезистентность и увеличение риска атеросклероза).",
+  "conclusion_text7": "Все эти изменения в конечном итоге приводят к уменьшению продолжительности жизни. Гиподинамия отрицательно сказывается и на работе головного мозга. В результате проявляются знать следующие симптомы: общая слабость, уменьшение трудоспособности, бессонница, снижение умственной активности, чрезмерная утомляемость и некоторые другие. При гиподинамии отмечается также уменьшение ёмкости лёгких и лёгочной вентиляции.",
+  "conclusion_text8": "Человеческое тело просто не предназначено для слишком долгого пребывания в сидячем положении. Но сейчас нам сложно проводить время не за рабочим столом.",
+  
+  "final_message": "Встаньте вовремя, что бы остаться здоровыми!",
+  
+  "sources_heading": "Источники",
+  "sources_text": "Подробный список источников и ссылок на исследования",
+  
+  "source1_desc": "Role of Low Energy Expenditure and Sitting in Obesity, Metabolic Syndrome, Type 2 Diabetes, and Cardiovascular Disease. Diabetes: Академический обзор исследований по бездействию. Предоставляет доказательства утверждения, что электрическая активность в мышцах ног отключается при сидении.",
+  
+  "source2_desc": "American Journal of Clinical Nutrition: Исследователи измеряли изменения в расходе энергии с подобными движению действиями. Они обнаружили, что сидя неподвижно увеличивает расход энергии на 5.6 ± 1.6 кДж/минуту (80 ± 23 калорий/час) выше состояния покоя, тогда как стоя неподвижно увеличивает его на 6.1 ± 1.7 кДж/минуту (87 ± 24 калорий/час).",
+  
+  "source3_text": "3. Too Much Sitting: The Population-Health Science of Sedentary Behavior",
+  "source3_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3404815/#!po=36.6667",
+  
+  "source4_text": "4. Time spent in sedentary posture is associated with waist circumference and cardiovascular risk",
+  "source4_url": "https://www.nature.com/articles/ijo201730",
+  
+  "source5_text": "5. Objectively measured light-intensity physical activity is independently associated with 2-h plasma glucose",
+  "source5_url": "https://pubmed.ncbi.nlm.nih.gov/17473059/",
+  
+  "source6_text": "6. ВОЗ - Глобальные риски для здоровья",
+  "source6_url": "https://www.who.int/healthinfo/global_burden_disease/GlobalHealthRisks_report_full.pdf",
+  
+  "source7_text": "7. Global Recommendations on Physical Activity for Health",
+  "source7_url": "https://www.ncbi.nlm.nih.gov/books/NBK305049/",
+  
+  "source8_text": "8. Sedentary Time and Its Association With Risk for Disease Incidence, Mortality, and Hospitalization in Adults",
+  "source8_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327&",
+  
+  "source9_text": "9. Sedentary time in adults and the association with diabetes, cardiovascular disease and death: systematic review and meta-analysis",
+  "source9_url": "https://pubmed.ncbi.nlm.nih.gov/22890825/",
+  
+  "source10_text": "10. The emergence of sedentary behaviour physiology and its effects on the cardiometabolic profile in young and older adults",
+  "source10_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5005832/",
+  
+  "source11_text": "11. Physical activity, sedentary behavior time and lipid levels in the Observation of Cardiovascular Risk Factors in Luxembourg study",
+  "source11_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4530482/",
+  
+  "source12_text": "12. A 2-wk reduction of ambulatory activity attenuates peripheral insulin sensitivity",
+  "source12_url": "https://pubmed.ncbi.nlm.nih.gov/20044474/",
+  
+  "source13_text": "13. Effects of 1 day of inactivity on insulin action in healthy men and women: interaction with energy intake",
+  "source13_url": "https://www.metabolismjournal.com/article/S0026-0495(10)00315-X/abstract",
+  
+  "source14_text": "14. The Relationship Between Sedentary Behavior, Back Pain, and Psychosocial Correlates Among University Employees",
+  "source14_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6465323/",
+  
+  "source15_text": "15. Sedentary behaviour and the risk of depression: a meta-analysis",
+  "source15_url": "https://bjsm.bmj.com/content/49/11/705",
+  
+  "source16_desc": "Arteriosclerosis, Thrombosis and Vascular Biology: Это исследование измерило активность 20 самопровозглашенных \"ленивцев\", которые были худыми (ИМТ = 23 ± 2 кг/м2) или слегка страждавшими ожирением (ИМТ = 33 ± 2 кг/м2), и обнаружило, что \"участники с ожирением сидели на 164 минуты дольше в день, чем худые участники\" и \"худые участники находились в вертикальном положении на 152 минуты дольше в день, чем участники с ожирением\".",
+  
+  "source17_desc": "Источник для \"Между 1980 и 2000 годами уровень ожирения удвоился среди взрослых\" и \"Около 60 миллионов взрослых, или 30% взрослого населения, сейчас страдают ожирением.\"",
+  
+  "source18_text": "18. Minimal intensity physical activity (standing and walking) of longer duration improves insulin action and plasma lipids more than shorter periods of moderate to vigorous exercise (cycling) in sedentary subjects when energy expenditure is comparable",
+  "source18_url": "https://pubmed.ncbi.nlm.nih.gov/23418444/",
+  
+  "source19_text": "19. The Futility of the Workout-Sit Cycle In a new statement, the American Heart Association warns that exercise doesn't seem to undo the health effects of excessive sitting",
+  "source19_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327",
+  
+  "source20_text": "20. Breaks in sedentary time: beneficial associations with metabolic risk",
+  "source20_url": "https://pubmed.ncbi.nlm.nih.gov/18252901/",
+  
+  "source21_text": "21. Acute effects of active breaks during prolonged sitting on subcutaneous adipose tissue gene expression: an ancillary analysis of a randomised controlled trial",
+  "source21_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6405989/",
+  
+  "source22_text": "22. Metabolic Effects of Breaking Prolonged Sitting With Standing or Light Walking in Older South Asians and White Europeans: A Randomized Acute Study",
+  "source22_url": "https://pubmed.ncbi.nlm.nih.gov/30403772/",
+  
+  "source23_text": "23. Sitting-time, physical activity, and depressive symptoms in mid-aged women",
+  "source23_url": "https://pubmed.ncbi.nlm.nih.gov/23953353/",
+  
+  "source24_text": "24. Objectively measured sedentary time, physical activity, and metabolic risk: the Australian Diabetes, Obesity and Lifestyle Study (AusDiab)",
+  "source24_url": "https://pubmed.ncbi.nlm.nih.gov/18000181/",
+  
+  "source25_desc": "обзор исследований о рисках для здоровья при сидении",
+  "source25_url": "http://bjsm.bmj.com/content/43/2/81.full",
+  
+  "source26_text": "26. ВОЗ - Физическая неактивность: ведущая причина болезней и инвалидности",
+  "source26_url": "https://www.who.int/news/item/04-04-2002-physical-inactivity-a-leading-cause-of-disease-and-disability-warns-who"
+} 
