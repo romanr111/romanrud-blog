@@ -5,12 +5,14 @@ slug: "/books/from-zero-to-one/"
 description: "Питера Тиля"
 tags:
   - Обзор книги
+banner: "/images/from-zero-to-one-book.jpeg"
+ns: "blog.from-zero-to-one"
 ---
 
 <div className="image-container">
-    <div className="image_item">
-        <img alt="От Нуля к Единице книга" src="/images/from-zero-to-one-book.jpeg" />
-    </div>
+  <div className="image_item">
+    <Translation id="image_path" altTextId="title" tag="img" ns={props.data.post.ns} />
+  </div>
 </div>
 
 <style jsx>{`
@@ -22,145 +24,164 @@ tags:
     margin-bottom: 220px;
     text-align: center;
   }
-   .image-container img {
+  .image-container img {
     margin-top: 0.5rem;
     max-width: 100%;
     max-height: 100%;
   }
 `}</style>
 
- ## Суть книги в двух словах:
-**Конкуренция - для неудачников!**
+<Translation id="main_heading" tag="h2" ns={props.data.post.ns} />
 
-Следующий Билл Гейтс не будет строить операционную система, а следующий Лари Пейдж не будет заниматься поисковиком. Если вы копируете их и мыслите по шаблону и движетесь от 1 к n; 
+<Translation id="main_description" tag="p" ns={props.data.post.ns} />
 
-Процесс создания чего-то нового, от ничего к чему-то, от отсутствия решения к решению происходит только раз. От нуля к единице. И тот, кто сделал это - забирает все награды!
+<Translation id="key_points" tag="h3" ns={props.data.post.ns} />
 
-### Ключевые моменты
+<Translation id="key_points_sum" tag="p" ns={props.data.post.ns} />
 
-Это мое краткое изложение книги «От нуля к единице. Как создать стартап, который изменит будущее» Питера Тиля. Мои записи носят неформальный характер и часто содержат цитаты из книги, а также мои собственные мысли. Это резюме включает главные уроки и важные отрывки из книги.
+#
 
-* **Успешные люди находят возможности для создания бизнеса в неожиданных местах** 
-    * Думая о бизнесе, они исходят из первых принципов, а не формул. 
+- <Translation id="successful_people" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="successful_people_subItem1" tag="span" ns={props.data.post.ns} />
 
-* **Стоимость бизнеса определяется его способностью генерировать денежные потоки в будущем** 
-    * Любая фирма, которую легко заменить (например, ночные клубы или рестораны) увидит, что со временем ее прибыль съедается конкуренцией; 
-    * В текущий момент, они могут зарабатывать хорошие суммы, но со временем клиенты будут переходить к более новым и модным альтернативам;
-    * Если вы сосредоточитесь на краткосрочном росте, вы упускаете самый важный вопрос: сохранится ли этот бизнес через десять лет?
+- <Translation id="business_value" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="business_value_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="business_value_subItem2" tag="span" ns={props.data.post.ns} />
+  - <Translation id="business_value_subItem3" tag="span" ns={props.data.post.ns} />
 
-* **Капитализм и конкуренция это две противоположные вещи** 
-    * Суть капитализма - в получении прибыли. Тогда как конкуренция прибыль сокращает;
-    * У Google в 100 раз больше прибыли, чем у любого из авиаперевозчиков. Авиакомпании конкурируют друг с другом, а Google стоит особняком;  
-    * Если вы хотите создать и закрепить долговременную ценность для потребителя, не создавайте безликий бизнес;
-    * В долгосрочной перспективе при совершенной конкуренции ни одна компания не получает прибыли;  
-    * Противоположность совершенной конкуренции - монополия;  
-    * Конкурирующая фирма должна продавать по рыночной цене, монополия может устанавливать свою цену.
+- <Translation id="capitalism_competition" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem2" tag="span" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem3" tag="span" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem4" tag="span" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem5" tag="span" ns={props.data.post.ns} />
+  - <Translation id="capitalism_competition_subItem6" tag="span" ns={props.data.post.ns} />
 
-* **Под монополией подразумевается компания, которая настолько хороша, что никакая другая фирма не может предложить близкой альтернативы**
-    * Монополии заслуживают своей плохой репутации только в мире, где ничего не меняется. Творческие монополии предоставляют покупателям больший выбор, добавляя в мир совершенно новые категории изобилия;
-    * Монополии движут прогрессом. Перспектива нескольких лет или десятилетий быть монополией - мощный стимул для инноваций.
+- <Translation id="monopoly_def" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="monopoly_def_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="monopoly_def_subItem2" tag="span" ns={props.data.post.ns} />
 
-##### Свойства монополии:
+#
 
-1. **Собственная технология** 
-    * Для получения монопольного положения, ваша технология должна быть минимум в 10 раз лучше чем у конкурентов; 
-    * Самый просто способ сделать что-то лучше в 10 раз чем у других - изобрести что-то принципиально новое; 
-    * Или же радикально улучшить существующую технологию; 
-        * PayPal сделал возможность покупки или продажи через eBay в 10 раз лучше.
-        * Amazon смог предложить в 10 раз больше книг, чем любой книжный магазин.
-        * iPad значительно улучшил все, что было до него.
+<Translation id="monopoly_properties" tag="h5" ns={props.data.post.ns} />
 
-2. **Сетевой эффект** 
-    * Чем больше у вас пользователей, тем больше ценность для каждого пользователя;
-    * Если все ваши друзья в Facebook, то вам тоже имеет смысл присоединиться.
+1. <Translation id="proprietary_tech" tag="strong" ns={props.data.post.ns} />
+   - <Translation id="proprietary_tech_subItem1" tag="span" ns={props.data.post.ns} />
+   - <Translation id="proprietary_tech_subItem2" tag="span" ns={props.data.post.ns} />
+   - <Translation id="proprietary_tech_subItem3" tag="span" ns={props.data.post.ns} />
+     - <Translation id="proprietary_tech_example1" tag="span" ns={props.data.post.ns} />
+     - <Translation id="proprietary_tech_example2" tag="span" ns={props.data.post.ns} />
+     - <Translation id="proprietary_tech_example3" tag="span" ns={props.data.post.ns} />
 
-3. **Эффект масштаба**
-    * Чем больше ваш объем, тем меньше ваши производственные затраты; 
+2. <Translation id="network_effect" tag="strong" ns={props.data.post.ns} />
+   - <Translation id="network_effect_subItem1" tag="span" ns={props.data.post.ns} />
+   - <Translation id="network_effect_subItem2" tag="span" ns={props.data.post.ns} />
 
-4. **Бренд** 
-    * Вы себя зарекомендовали, ваш продукт узнают и выделяют среди других. 
+3. <Translation id="scale_effect" tag="strong" ns={props.data.post.ns} />
+   - <Translation id="scale_effect_subItem1" tag="span" ns={props.data.post.ns} />
 
-##### Построение монополии: 
+4. <Translation id="brand" tag="strong" ns={props.data.post.ns} />
+   - <Translation id="brand_subItem1" tag="span" ns={props.data.post.ns} />
 
-* В позитивном ключе, стартап - это самая большая группа людей, которую вы можете убедить в плане построения нового будущего
+#
 
-* **Идеальный целевой рынок для стартапа - это небольшая группа определенных людей, сконцентрированная вместе и обслуживаемая небольшим числом конкурентов или полным их отсутствием** 
-    * Любой большой рынок - плохой выбор, а большой рынок, с уже конкурирующими компаниями, еще хуже.
+<Translation id="building_monopoly" tag="h5" ns={props.data.post.ns} />
 
-* **Как только вы начнёте доминировать на нишевом рынке, расширяйтесь на соседние рынки**
-    * Джефф Безос доминировал в онлайн продаже книг, затем стал доминировать на большинстве аналогичных рынков, таких как компакт-диски, видео и программное обеспечение. Затем они добавили больше категорий, пока постепенно не стали доминировать во всей онлайн-торговле!
-    * Facebook изначально был ориентирован только на студентов Гарварда;
-    * А продажи eBay вначале практически полностью состояли из предметов коллекционирования;
+- <Translation id="startup_def" tag="span" ns={props.data.post.ns} />
 
-* **Не разрушайте целенаправленно бизнес других** 
-    * Творчество важнее! Например, PayPal работал с Visa, Napster с Music Industry;
+- <Translation id="target_market" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="target_market_subItem1" tag="span" ns={props.data.post.ns} />
 
-* **Последний будет первым** 
-    * Не пытайтесь раньше времени создать новый рынок; Стройте своё дело улучшая узнаваемый продукт, который уже предлагают на рынке успешные конкуренты;
-    * Вместо того что бы быть первопроходцем, станьте тем, кто сделает последнее великое развитие на конкретном рынке и пожнет плоды зрелой экосистемы. Google не был первым поисковиком, но смог улучшить технологию в 10-ти кратном масштабе.
- 
-* **Думайте о продукте а не о продажах** 
-    * Если для завоевания места на рынке вашему продукту нужна реклама или агенты по продаже это не очень здорово; 
-    * Сконцентрируйтесь на улучшении продукта; 
-    * Используйте вирусное распространение; 
-    * Чем лучше продажи, тем меньше они видны; 
+- <Translation id="market_domination" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="market_domination_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="market_domination_subItem2" tag="span" ns={props.data.post.ns} />
+  - <Translation id="market_domination_subItem3" tag="span" ns={props.data.post.ns} />
 
-##### Секреты
+- <Translation id="dont_destroy" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="dont_destroy_subItem1" tag="span" ns={props.data.post.ns} />
 
-* **Большинство людей думают, что все проблемы в мире уже решены. То, что осталось сделать, либо легко, либо невозможно**
-    * Но и невозможно найти секреты, не ища их. Если вы думаете, что что-то трудное невозможно, вы даже не начнете пытаться это сделать.
+- <Translation id="last_first" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="last_first_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="last_first_subItem2" tag="span" ns={props.data.post.ns} />
 
-* **Нестандартные личности двигают мир**  
-    * Полезный вопрос на собеседовании (в том числе и для себя): «В каком важном суждении с вами согласны очень немногие?»
+- <Translation id="product_over_sales" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="product_over_sales_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="product_over_sales_subItem2" tag="span" ns={props.data.post.ns} />
+  - <Translation id="product_over_sales_subItem3" tag="span" ns={props.data.post.ns} />
+  - <Translation id="product_over_sales_subItem4" tag="span" ns={props.data.post.ns} />
 
-> “Маленький человек верит в удачу и благоприятное стечение обстоятельств. Сильный человек верит в причины и следствия.”  
-> 
-> — Эмерсон 
+#
 
-Вместо того, что бы быть многогранной посредственностью и считать себя гармонично-развитой личностью, человек с твёрдыми убеждениями ставит перед собой цель и стремиться к ней. Вместо того, что бы пытаться стать таким как все, он пытается стать выдающимся специалистом в чем то одном; 
-Вы должны неустанно сосредоточиться на том, что у вас хорошо получается, но прежде вы должны хорошенько подумать о том, будет ли это полезно в будущем? В мире степенного закона вы не можете позволить себе не думать о том, где ваши действия попадет на кривую.
+<Translation id="secrets_heading" tag="h5" ns={props.data.post.ns} />
 
-##### 7 вопросов, на которые должен ответить каждый бизнес:
+- <Translation id="secrets" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="secrets_subItem1" tag="span" ns={props.data.post.ns} />
 
-* **Инженерный вопрос:** можете ли вы создать прорывную технологию вместо постепенных улучшений?
-    * Создать продукт или сервисное решение, обеспечивающее 10-кратное преимущество в скорости, производительности или удобстве по сравнению с существующим положением дел; 
-* **Вопрос о моменте:** сейчас самое подходящее время, чтобы начать этот конкретный бизнес? 
-    * Есть ли вся необходимая инфраструктура и условия?
-* **Вопрос о монополии:** начинаете с большой доли на небольшом рынке?
-* **Вопрос о людях:** у вас есть правильная команда?
-* **Вопрос распространения:** у вас есть способ доставить ваш продукт?
-    * У вас есть возможность не только создать, но и продать ваш продукт? Думаете ли вы о покупателях?
-* **Вопрос о долговечности:** будет ли ваше положение на рынке оправданным через 10-20 лет?
-    * Что может помешать китайцам обрушить мой бизнес?
-* **Секретный вопрос:** Нашли ли вы уникальную возможность, которую не видят другие?
+- <Translation id="unconventional" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="unconventional_subItem1" tag="span" ns={props.data.post.ns} />
 
-##### Пример Tesla
+<Translation id="emerson_quote" tag="blockquote" ns={props.data.post.ns} />
 
-* **Технологии** - Автомобиль года. Другие компании используют их технологии;
-* **Время** - правительство отлично финансировало экологические проекты; 
-    * Чистый мир - политический приоритет. В январе 2010 года Tesla получила от Министерства энергетики США заём в размере 465 миллионов долларов;
-* **Монополия** - не большой сегмент рынка на котором Тесла могла доминировать. 
-    * Рынок люксовых спортивных автомобилей. Продав всего 3000 авто но зато по 100к за единицу Tesla начав с малого смогла провести необходимые исследования и разработки для создания более дешевой модели;
-* **Люди** - Илон отличный инженер и специалист по продажам. 
-    * Если ты попал в Tesla, значит ты попал в войска спец назначения; 
-* **Продажи** - собственная дистрибьюторская сеть; 
-    * Тесла продает и обслуживает машины в собственных центрах, это обходится дороже но дает возможность отслеживать впечатления потребителей и развивать бренд Tesla и обеспечивает экономию в долгосрочной перспективе. 
-* **Долгожительство** - Тесла смогла оторваться от конкурентов. Бренд завоевавший любовь потребителей незаменимый лидерский признак Tesla.
-* **Открытие** - интерес к чистым технологиям в первую очередь движет мода. 
-    * Богачи стремились обрести имидж хранителей экологии. Тесла решила создавать машины в которых можно выглядеть крутым без оговорок. 
+<Translation id="focus_description" tag="p" ns={props.data.post.ns} />
 
-##### Меньше но лучше
+#
 
-* Стив Джобс, когда вернулся в Apple безжалостно сократил линейку продукции что бы сфокусировать внимание на той горстке изделий в производстве которых компания могла достигнуть 10 кратного превосходства над конкурентами; 
-    * Джобс отлично понимал, чтобы изменить мир нужно тщательно планировать каждый шаг, а не прислушиваться к мнению фокус групп и копировать чужие успехи. Бизнес с детальным планом развития всегда будет недооценён в мире покрытыми мраком;
+<Translation id="seven_questions" tag="h5" ns={props.data.post.ns} />
 
+- <Translation id="engineering" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="engineering_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="engineering_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="timing" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="timing_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="timing_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="monopoly_question" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="monopoly_question_subItem1" tag="span" ns={props.data.post.ns} />
+- <Translation id="people_question" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="people_question_subItem1" tag="span" ns={props.data.post.ns} />
+- <Translation id="distribution" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="distribution_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="distribution_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="durability" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="durability_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="durability_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="secret_question" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="secret_question_subItem1" tag="span" ns={props.data.post.ns} />
 
-### Что я вынес для себя из этой книги  
+#
 
-Мне пришло понимание, того как FANG компании обрели доминирующее положение на рынке. И примерно как должен быть устроен “идеальный стартап” в Силиконовой долине. 
+<Translation id="tesla_example" tag="h5" ns={props.data.post.ns} />
 
-Сделав курс по тестированию, пару лет назад, я решил пойти на шаг вперед - запустить школу по инновационной модели ISA (Income Share Agreement).  
-В данном случае студент оплачивает за обучение в виде % от своего дохода и только после успешного трудоустройства. Забегая наперед, скажу, что бизнес не вышел, но это уже совсем другая история. Посыл в том, что книга помогла к этому прийти. И сам опыт многого стоит, я извлек огромное количество уроков.
+- <Translation id="tesla_tech" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_tech_subItem1" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_timing" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_timing_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="tesla_timing_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_monopoly" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_monopoly_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="tesla_monopoly_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_people" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_people_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="tesla_people_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_sales" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_sales_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="tesla_sales_subItem2" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_durability" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_durability_subItem1" tag="span" ns={props.data.post.ns} />
+- <Translation id="tesla_discovery" tag="strong" ns={props.data.post.ns} />
+  - <Translation id="tesla_discovery_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="tesla_discovery_subItem2" tag="span" ns={props.data.post.ns} />
 
-В целом, книга вдохновляющая и интересная, как и ее автор. Про автора хочу добавить, что успешных предпринимателей не так уж и много, серийно-успешных еще меньше, а Питер Тиль не только сам стал таким, но и создал вокруг себя целую мафию в мире бизнеса - “Мафию PayPal”. 
-За что ему большой респект, так как без компаний, за которыми стоят эти люди, уже трудно представить нашу реальность. 
+#
+
+<Translation id="less_better" tag="h5" ns={props.data.post.ns} />
+
+- <Translation id="less_better_subItem1" tag="span" ns={props.data.post.ns} />
+  - <Translation id="less_better_subItem2" tag="span" ns={props.data.post.ns} />
+
+#
+
+<Translation id="takeaway_heading" tag="h3" ns={props.data.post.ns} />
+
+<Translation id="takeaway_text1" tag="p" ns={props.data.post.ns} />
+<Translation id="takeaway_text2" tag="p" ns={props.data.post.ns} />
+<Translation id="takeaway_text3" tag="p" ns={props.data.post.ns} />

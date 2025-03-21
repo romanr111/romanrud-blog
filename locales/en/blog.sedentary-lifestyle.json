@@ -1,0 +1,182 @@
+{
+  "title": "The Whole Truth About Sedentary Lifestyle",
+  "description": "The Whole Truth About Sedentary Lifestyle",
+  "main_heading": "What Will You Learn?",
+  "main_point1": "How a sedentary lifestyle affects your health",
+  "main_point2": "How to minimize the negative consequences",
+  
+  "intro_text": "The human body is designed for movement. Our ancestors worked hard in the fields or hunted for hours to get food. But when television, computers, and routine office work entered our lives, people began to spend more time sitting than ever before in human history: 7.7-9 hours a day, which is even more than some people sleep;",
+  
+  "personal_experience": "In my case, exactly so: on average I sit 8 hours and 44 minutes at the computer per day. But sometimes it's more than 9 hours. This lifestyle has led to certain health problems, which prompted me to research and write this article.",
+  
+  "image_alt": "Oura ring activity level",
+  "image_path": "/images/oura_activity.jpeg",
+  
+  "immediate_effects_heading": "What Happens When You Sit?",
+  "immediate_effects_title": "Immediately",
+  "immediate_effect1": "Electrical activity in the leg muscles shuts off;",
+  "immediate_effect2": "Calorie burning drops sharply to one per minute.",
+  "immediate_effect3": "About 50-60% less than when you stand and about 200% less than when walking;",
+  
+  "after_two_hours_title": "After 2 Hours",
+  "after_two_hours_effect1": "Good cholesterol drops by 20%",
+  "after_two_hours_effect2": "Glucose tolerance worsens (one of the risk factors for diabetes)",
+  
+  "harm_heading": "How Your Chair Can Harm You",
+  "harm_quote": "Here's what James Levine, a professor of medicine at the Mayo Clinic, one of the world's largest private medical and research centers, writes: 'Sitting is more dangerous than smoking, kills more people than HIV, and is more treacherous than parachuting.'",
+  
+  "harm_effect1": "Physical inactivity has been identified as the fourth most significant risk factor for global mortality (approximately 3.2 million, 6% of deaths worldwide).",
+  "harm_effect2": "Moreover, physical inactivity is considered to be the main cause of approximately 21-25% of breast and colon cancer cases, 27% of diabetes, and approximately 30% of ischemic heart disease.",
+  "harm_effect3": "A sedentary lifestyle increases the risk of developing type 2 diabetes by 112% and increases the risk of heart disease by 147%;",
+  "harm_effect4": "Studies have shown that walking less than 1,500 steps a day or prolonged sitting without reducing calorie intake can cause a serious increase in insulin resistance, which is a key factor in type 2 diabetes;",
+  
+  "posture_heading": "Posture Changes and Spine Suffers",
+  "posture_text1": "When you sit for too long, gravity and fatigue tend to take their toll, leading to a forward-leaning head, rounded shoulders, and a bent back.",
+  "posture_text2": "The tension that occurs with altered body position can lead to many different problems, such as neck/lower back pain, trigger point formation, and even disc degeneration.",
+  "posture_text3": "In addition, disc nutrition only occurs during movement, so the risk of intervertebral hernias and protrusions increases;",
+  
+  "trigger_point_image_alt": "Trigger points in muscles",
+  "trigger_point_image_path": "/images/trigger_point.jpeg",
+  
+  "trigger_point_text1": "A trigger point, like a knot in a rope, shortens the muscle and weakens it.",
+  "trigger_point_text2": "Now imagine the spine. It is surrounded by a muscular corset. What will happen to the spine if trigger points appear in the muscles of this corset? It is perfectly clear that the muscles will shorten, bending the spine like a bowstring bends a bow. And the more trigger points there are, the more the muscles will shorten, and the more noticeable the spine will curve.",
+  "trigger_point_text3": "Externally, this will look like a forced posture. A person bent over from back pain is the external manifestation of muscle shortening caused by trigger points in myofascial syndrome.",
+  
+  "mood_heading": "The Connection Between Back Health and Mood",
+  "mood_text1": "As is known, the brain consumes 20% of oxygen, and therefore a huge number of blood vessels pass through the neck. Neck muscles, falling into hypertonicity from constant load, can squeeze them, worsening blood circulation to the brain. Therefore, many diseases of the psycho-emotional sphere (neuroses) are associated with the state of the musculoskeletal system. In particular, with impaired posture.",
+  "mood_text2": "In addition to this, in response to negative emotions, reflexively, as a result of an innate behavioral instinct, a person takes the so-called passive-defensive posture. It is characterized by raised and forward-facing shoulders, a lowered and forward-protruding head, and a hunched back. Which further worsens the normal distribution of load on the muscles and spine.",
+  
+  "neck_strain_image_alt": "Neck strain when bending",
+  "neck_strain_image_path": "/images/smartfon_spina.jpeg",
+  
+  "weight_heading": "Sitting Makes You Gain Weight",
+  "weight_text1": "Overweight people spend only 2.5 hours more time sitting than thin people;",
+  "weight_text2": "Between 1980 and 2000, people began to sit 8% more, and the number of overweight people doubled; Every third American is overweight;",
+  
+  "digestion_heading": "Digestion Worsens",
+  "digestion_text": "Prolonged sitting after eating can compress the abdominal cavity, slowing digestion, which can lead to various problems such as heartburn and constipation.",
+  
+  "skin_heading": "Problems with Skin, Nails, and Hair",
+  "skin_text": "Since cells do not receive adequate blood supply with a slowed metabolism, the skin suffers, becoming dry and dull. Nails, in turn, become brittle, and hair can lose elasticity, become brittle, and even fall out.",
+  
+  "exercise_heading": "Exercise Is Not a Panacea",
+  "exercise_text": "You might think: 'But I exercise several times a week.' Research shows that while exercise is beneficial, it does not cancel out the harm caused by prolonged sitting.",
+  
+  "standing_heading": "What Happens When You Stand Up?",
+  "standing_immediate_title": "Within 90 Seconds:",
+  "standing_immediate_effect": "Reactivation of normal cholesterol, blood sugar, and triglyceride metabolism",
+  
+  "continue_standing_title": "If You Continue Standing:",
+  "continue_standing_effect1": "Blood sugar level drops;",
+  "continue_standing_effect2": "Blood flow improves;",
+  "continue_standing_effect3": "Metabolism improves;",
+  
+  "solution_heading": "Solution - A Lifestyle Based on Movement",
+  "solution_tip1": "Interrupt sitting as often as possible;",
+  "solution_tip2": "Make calls and hold meetings 'on your feet.'",
+  "solution_tip3": "If you use public transport — get off one stop earlier and walk;",
+  "solution_tip4": "Take the stairs instead of the elevator.",
+  "solution_tip5": "Use a standing desk;",
+  "solution_tip6": "Keep the monitor at eye level; Make modifications for your laptop/PC, buy a separate keyboard, mouse, and stand;",
+  
+  "steps_heading": "How Many Steps Should You Take Per Day?",
+  "steps_text1": "A 2011 study showed that 10,000 steps per day is a reasonable goal for healthy adults.",
+  
+  "activity_assessment_title": "You can assess your activity level:",
+  "activity_low": "Inactive: less than 5,000 steps per day",
+  "activity_medium": "Moderate activity: 7,500 to 9,999 steps per day.",
+  "activity_high": "Very active: more than 12,500 steps per day",
+  
+  "conclusion_heading": "Concluding Remarks",
+  "conclusion_text1": "The human lifestyle has changed significantly over the course of several hundred years, which is not much in terms of human evolution. Starting with the industrial revolution, when machines began to replace manual labor, and up to the appearance of computers, when you may not even get up all day.",
+  "conclusion_text2": "As a result, people have gone from an active lifestyle with rare breaks during the day to sit, to rare breaks to walk.",
+  "conclusion_text3": "Due to the lack of need for physical activity, people spend more and more time in stationary positions. Without work, muscles weaken and gradually atrophy. Strength and endurance decrease, neuro-reflex connections are disrupted, leading to disorders of the nervous system (vegetative-vascular dystonia, depression, myofascial syndromes develop), and metabolism is disturbed.",
+  "conclusion_text4": "Over time, due to physical inactivity, changes in the musculoskeletal system increase: bone mass progressively decreases (osteoporosis develops), the function of peripheral joints (osteoarthritis) and the spine (osteochondrosis) suffers.",
+  "conclusion_text5": "Prolonged physical inactivity leads to cardiovascular diseases (ischemic heart disease, arterial hypertension) and digestive disorders (intestinal dysfunction).",
+  "conclusion_text6": "The chain of endocrine disorders due to physical inactivity manifests as metabolic syndrome (obesity, insulin resistance, and increased risk of atherosclerosis).",
+  "conclusion_text7": "All these changes ultimately lead to a decrease in life expectancy. Physical inactivity also negatively affects brain function. As a result, the following symptoms appear: general weakness, decreased work capacity, insomnia, decreased mental activity, excessive fatigue, and some others. With physical inactivity, there is also a decrease in lung capacity and pulmonary ventilation.",
+  "conclusion_text8": "The human body is simply not designed for prolonged sitting. But now it's difficult for us to spend time not at a desk.",
+  
+  "final_message": "Stand up in time to stay healthy!",
+  
+  "sources_heading": "Sources",
+  "sources_text": "Detailed list of sources and research references",
+  
+  "source1_text": "Hamilton, Hamilton & Zderic (2007). Role of low energy expenditure and sitting in obesity, metabolic syndrome, type 2 diabetes, and cardiovascular disease",
+  "source1_url": "http://diabetes.diabetesjournals.org/content/56/11/2655.long",
+  
+  "source2_text": "Levine et al. (2000). Role of Nonexercise Activity Thermogenesis in Resistance to Fat Gain in Humans",
+  "source2_url": "http://www.ajcn.org/content/72/6/1451.full",
+  
+  "source3_text": "Increasing Muscle Activity in Patterns of Sedentary Behavior (2012)",
+  "source3_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3404815/#!po=36.6667",
+  
+  "source4_text": "Prolonged sitting: is it a distinct coronary heart disease risk factor? (2006)",
+  "source4_url": "https://www.nature.com/articles/ijo201730",
+  
+  "source5_text": "Standing vs. sitting: Why there's more to good nutrition than what you eat",
+  "source5_url": "https://pubmed.ncbi.nlm.nih.gov/17473059/",
+  
+  "source6_text": "WHO - Global Health Risks",
+  "source6_url": "https://www.who.int/healthinfo/global_burden_disease/GlobalHealthRisks_report_full.pdf",
+  
+  "source7_text": "Global Recommendations on Physical Activity for Health",
+  "source7_url": "https://www.ncbi.nlm.nih.gov/books/NBK305049/",
+  
+  "source8_text": "Sedentary Time and Its Association With Risk for Disease Incidence, Mortality, and Hospitalization in Adults",
+  "source8_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327&",
+  
+  "source9_text": "Sedentary time in adults and the association with diabetes, cardiovascular disease and death: systematic review and meta-analysis",
+  "source9_url": "https://pubmed.ncbi.nlm.nih.gov/22890825/",
+  
+  "source10_text": "The emergence of sedentary behaviour physiology and its effects on the cardiometabolic profile in young and older adults",
+  "source10_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5005832/",
+  
+  "source11_text": "Physical activity, sedentary behavior time and lipid levels in the Observation of Cardiovascular Risk Factors in Luxembourg study",
+  "source11_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4530482/",
+  
+  "source12_text": "A 2-wk reduction of ambulatory activity attenuates peripheral insulin sensitivity",
+  "source12_url": "https://pubmed.ncbi.nlm.nih.gov/20044474/",
+  
+  "source13_text": "Effects of 1 day of inactivity on insulin action in healthy men and women: interaction with energy intake",
+  "source13_url": "https://www.metabolismjournal.com/article/S0026-0495(10)00315-X/abstract",
+  
+  "source14_text": "The Relationship Between Sedentary Behavior, Back Pain, and Psychosocial Correlates Among University Employees",
+  "source14_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6465323/",
+  
+  "source15_text": "Sedentary behaviour and the risk of depression: a meta-analysis",
+  "source15_url": "https://bjsm.bmj.com/content/49/11/705",
+  
+  "source16_text": "Levine et al. (2006). Non-Exercise Activity Thermogenesis - Arteriosclerosis, Thrombosis and Vascular Biology: This study measured the activity of 20 self-proclaimed 'couch potatoes' who were lean (BMI = 23 ± 2 kg/m²) or mildly obese (BMI = 33 ± 2 kg/m²) and found that 'obese participants were seated for 164 min longer per day than were lean participants' and 'lean participants were upright for 152 min longer per day than obese participants'.",
+  "source16_url": "http://atvb.ahajournals.org/cgi/content/full/26/4/729",
+  
+  "source17_text": "US Center for Disease Control: Facts About Obesity in the United States - Source for 'Between 1980 and 2000, obesity rates doubled among adults' and 'About 60 million adults, or 30% of the adult population, are now obese.'",
+  "source17_url": "http://www.cdc.gov/pdf/facts_about_obesity_in_the_united_states.pdf",
+  
+  "source18_text": "Minimal intensity physical activity (standing and walking) of longer duration improves insulin action and plasma lipids more than shorter periods of moderate to vigorous exercise (cycling) in sedentary subjects when energy expenditure is comparable",
+  "source18_url": "https://pubmed.ncbi.nlm.nih.gov/23418444/",
+  
+  "source19_text": "The Futility of the Workout-Sit Cycle In a new statement, the American Heart Association warns that exercise doesn't seem to undo the health effects of excessive sitting",
+  "source19_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327",
+  
+  "source20_text": "Breaks in sedentary time: beneficial associations with metabolic risk",
+  "source20_url": "https://pubmed.ncbi.nlm.nih.gov/18252901/",
+  
+  "source21_text": "Acute effects of active breaks during prolonged sitting on subcutaneous adipose tissue gene expression: an ancillary analysis of a randomised controlled trial",
+  "source21_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6405989/",
+  
+  "source22_text": "Metabolic Effects of Breaking Prolonged Sitting With Standing or Light Walking in Older South Asians and White Europeans: A Randomized Acute Study",
+  "source22_url": "https://pubmed.ncbi.nlm.nih.gov/30403772/",
+  
+  "source23_text": "Sedentary behaviors and subsequent health outcomes in adults a systematic review of longitudinal studies, 1996-2011",
+  "source23_url": "https://pubmed.ncbi.nlm.nih.gov/23953353/",
+  
+  "source24_text": "The Association Between Television Viewing Time and All-Cause Mortality: A Meta-Analysis",
+  "source24_url": "https://pubmed.ncbi.nlm.nih.gov/18000181/",
+  
+  "source25_text": "Television viewing time and reduced life expectancy: a life table analysis",
+  "source25_url": "http://bjsm.bmj.com/content/43/2/81.full",
+  
+  "source26_text": "Physical inactivity a leading cause of disease and disability, warns WHO",
+  "source26_url": "https://www.who.int/news/item/04-04-2002-physical-inactivity-a-leading-cause-of-disease-and-disability-warns-who"
+} 

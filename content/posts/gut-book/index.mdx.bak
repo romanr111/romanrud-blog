@@ -115,5 +115,9 @@ ns: "blog.gut"
 <Translation id="takeaway_text3" tag="p" ns={props.data.post.ns} />
 
 <p>
-  <Translation id="takeaway_text4" tag="span" ns={props.data.post.ns} /> <a href="https://www.amazon.com/Squatty-Potty-Original-Bathroom-Toilet/dp/B007BISCT0/ref=sr_1_4?dchild=1&keywords=bathroom+toilet+foot+stool&qid=1615790397&sr=8-4" target="_blank" rel="noopener noreferrer"><Translation id="example_link" tag="span" ns={props.data.post.ns} /></a>.
+  <Translation id="takeaway_text4" tag="span" ns={props.data.post.ns} />{" "}
+  <a href="https://www.amazon.com/Squatty-Potty-Original-Bathroom-Toilet/dp/B007BISCT0/ref=sr_1_4?dchild=1&keywords=bathroom+toilet+foot+stool&qid=1615790397&sr=8-4">
+    {props.pageContext.locale === "ru" ? "например" : props.pageContext.locale === "uk" ? "наприклад" : "for example"}
+  </a>.
 </p>
+ 
