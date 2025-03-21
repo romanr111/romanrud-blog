@@ -102,77 +102,81 @@
   "sources_heading": "Sources",
   "sources_text": "Detailed list of sources and research references",
   
-  "source1_desc": "Role of Low Energy Expenditure and Sitting in Obesity, Metabolic Syndrome, Type 2 Diabetes, and Cardiovascular Disease. Diabetes: An academic review paper of research on inactivity. Provides evidence for the claim that electrical activity in leg muscles shuts off when sitting.",
+  "source1_text": "Hamilton, Hamilton & Zderic (2007). Role of low energy expenditure and sitting in obesity, metabolic syndrome, type 2 diabetes, and cardiovascular disease",
+  "source1_url": "http://diabetes.diabetesjournals.org/content/56/11/2655.long",
   
-  "source2_desc": "American Journal of Clinical Nutrition: Researchers measured changes in energy expenditure with fidgeting-like activities. They found that sitting still increases energy expenditure by 5.6 ± 1.6 kJ/minute (80 ± 23 calories/hour) above resting, while standing still increases it 6.1 ± 1.7 kJ/minute (87 ± 24 calories/hour).",
+  "source2_text": "Levine et al. (2000). Role of Nonexercise Activity Thermogenesis in Resistance to Fat Gain in Humans",
+  "source2_url": "http://www.ajcn.org/content/72/6/1451.full",
   
-  "source3_text": "3. Too Much Sitting: The Population-Health Science of Sedentary Behavior",
+  "source3_text": "Increasing Muscle Activity in Patterns of Sedentary Behavior (2012)",
   "source3_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3404815/#!po=36.6667",
   
-  "source4_text": "4. Time spent in sedentary posture is associated with waist circumference and cardiovascular risk",
+  "source4_text": "Prolonged sitting: is it a distinct coronary heart disease risk factor? (2006)",
   "source4_url": "https://www.nature.com/articles/ijo201730",
   
-  "source5_text": "5. Objectively measured light-intensity physical activity is independently associated with 2-h plasma glucose",
+  "source5_text": "Standing vs. sitting: Why there's more to good nutrition than what you eat",
   "source5_url": "https://pubmed.ncbi.nlm.nih.gov/17473059/",
   
-  "source6_text": "6. WHO - Global Health Risks",
+  "source6_text": "WHO - Global Health Risks",
   "source6_url": "https://www.who.int/healthinfo/global_burden_disease/GlobalHealthRisks_report_full.pdf",
   
-  "source7_text": "7. Global Recommendations on Physical Activity for Health",
+  "source7_text": "Global Recommendations on Physical Activity for Health",
   "source7_url": "https://www.ncbi.nlm.nih.gov/books/NBK305049/",
   
-  "source8_text": "8. Sedentary Time and Its Association With Risk for Disease Incidence, Mortality, and Hospitalization in Adults",
+  "source8_text": "Sedentary Time and Its Association With Risk for Disease Incidence, Mortality, and Hospitalization in Adults",
   "source8_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327&",
   
-  "source9_text": "9. Sedentary time in adults and the association with diabetes, cardiovascular disease and death: systematic review and meta-analysis",
+  "source9_text": "Sedentary time in adults and the association with diabetes, cardiovascular disease and death: systematic review and meta-analysis",
   "source9_url": "https://pubmed.ncbi.nlm.nih.gov/22890825/",
   
-  "source10_text": "10. The emergence of sedentary behaviour physiology and its effects on the cardiometabolic profile in young and older adults",
+  "source10_text": "The emergence of sedentary behaviour physiology and its effects on the cardiometabolic profile in young and older adults",
   "source10_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5005832/",
   
-  "source11_text": "11. Physical activity, sedentary behavior time and lipid levels in the Observation of Cardiovascular Risk Factors in Luxembourg study",
+  "source11_text": "Physical activity, sedentary behavior time and lipid levels in the Observation of Cardiovascular Risk Factors in Luxembourg study",
   "source11_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4530482/",
   
-  "source12_text": "12. A 2-wk reduction of ambulatory activity attenuates peripheral insulin sensitivity",
+  "source12_text": "A 2-wk reduction of ambulatory activity attenuates peripheral insulin sensitivity",
   "source12_url": "https://pubmed.ncbi.nlm.nih.gov/20044474/",
   
-  "source13_text": "13. Effects of 1 day of inactivity on insulin action in healthy men and women: interaction with energy intake",
+  "source13_text": "Effects of 1 day of inactivity on insulin action in healthy men and women: interaction with energy intake",
   "source13_url": "https://www.metabolismjournal.com/article/S0026-0495(10)00315-X/abstract",
   
-  "source14_text": "14. The Relationship Between Sedentary Behavior, Back Pain, and Psychosocial Correlates Among University Employees",
+  "source14_text": "The Relationship Between Sedentary Behavior, Back Pain, and Psychosocial Correlates Among University Employees",
   "source14_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6465323/",
   
-  "source15_text": "15. Sedentary behaviour and the risk of depression: a meta-analysis",
+  "source15_text": "Sedentary behaviour and the risk of depression: a meta-analysis",
   "source15_url": "https://bjsm.bmj.com/content/49/11/705",
   
-  "source16_desc": "Arteriosclerosis, Thrombosis and Vascular Biology: This study measured the activity of 20 self-proclaimed 'couch potatoes' who were lean (BMI = 23 ± 2 kg/m²) or mildly obese (BMI = 33 ± 2 kg/m²) and found that 'obese participants were seated for 164 min longer per day than were lean participants' and 'lean participants were upright for 152 min longer per day than obese participants'.",
+  "source16_text": "Levine et al. (2006). Non-Exercise Activity Thermogenesis - Arteriosclerosis, Thrombosis and Vascular Biology: This study measured the activity of 20 self-proclaimed 'couch potatoes' who were lean (BMI = 23 ± 2 kg/m²) or mildly obese (BMI = 33 ± 2 kg/m²) and found that 'obese participants were seated for 164 min longer per day than were lean participants' and 'lean participants were upright for 152 min longer per day than obese participants'.",
+  "source16_url": "http://atvb.ahajournals.org/cgi/content/full/26/4/729",
   
-  "source17_desc": "Source for 'Between 1980 and 2000, obesity rates doubled among adults' and 'About 60 million adults, or 30% of the adult population, are now obese.'",
+  "source17_text": "US Center for Disease Control: Facts About Obesity in the United States - Source for 'Between 1980 and 2000, obesity rates doubled among adults' and 'About 60 million adults, or 30% of the adult population, are now obese.'",
+  "source17_url": "http://www.cdc.gov/pdf/facts_about_obesity_in_the_united_states.pdf",
   
-  "source18_text": "18. Minimal intensity physical activity (standing and walking) of longer duration improves insulin action and plasma lipids more than shorter periods of moderate to vigorous exercise (cycling) in sedentary subjects when energy expenditure is comparable",
+  "source18_text": "Minimal intensity physical activity (standing and walking) of longer duration improves insulin action and plasma lipids more than shorter periods of moderate to vigorous exercise (cycling) in sedentary subjects when energy expenditure is comparable",
   "source18_url": "https://pubmed.ncbi.nlm.nih.gov/23418444/",
   
-  "source19_text": "19. The Futility of the Workout-Sit Cycle In a new statement, the American Heart Association warns that exercise doesn't seem to undo the health effects of excessive sitting",
+  "source19_text": "The Futility of the Workout-Sit Cycle In a new statement, the American Heart Association warns that exercise doesn't seem to undo the health effects of excessive sitting",
   "source19_url": "https://www.acpjournals.org/doi/10.7326/M14-1651?articleid=2091327",
   
-  "source20_text": "20. Breaks in sedentary time: beneficial associations with metabolic risk",
+  "source20_text": "Breaks in sedentary time: beneficial associations with metabolic risk",
   "source20_url": "https://pubmed.ncbi.nlm.nih.gov/18252901/",
   
-  "source21_text": "21. Acute effects of active breaks during prolonged sitting on subcutaneous adipose tissue gene expression: an ancillary analysis of a randomised controlled trial",
+  "source21_text": "Acute effects of active breaks during prolonged sitting on subcutaneous adipose tissue gene expression: an ancillary analysis of a randomised controlled trial",
   "source21_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6405989/",
   
-  "source22_text": "22. Metabolic Effects of Breaking Prolonged Sitting With Standing or Light Walking in Older South Asians and White Europeans: A Randomized Acute Study",
+  "source22_text": "Metabolic Effects of Breaking Prolonged Sitting With Standing or Light Walking in Older South Asians and White Europeans: A Randomized Acute Study",
   "source22_url": "https://pubmed.ncbi.nlm.nih.gov/30403772/",
   
-  "source23_text": "23. Sitting-time, physical activity, and depressive symptoms in mid-aged women",
+  "source23_text": "Sedentary behaviors and subsequent health outcomes in adults a systematic review of longitudinal studies, 1996-2011",
   "source23_url": "https://pubmed.ncbi.nlm.nih.gov/23953353/",
   
-  "source24_text": "24. Objectively measured sedentary time, physical activity, and metabolic risk: the Australian Diabetes, Obesity and Lifestyle Study (AusDiab)",
+  "source24_text": "The Association Between Television Viewing Time and All-Cause Mortality: A Meta-Analysis",
   "source24_url": "https://pubmed.ncbi.nlm.nih.gov/18000181/",
   
-  "source25_desc": "reviews research on the health risks of sitting",
+  "source25_text": "Television viewing time and reduced life expectancy: a life table analysis",
   "source25_url": "http://bjsm.bmj.com/content/43/2/81.full",
   
-  "source26_text": "26. WHO - Physical inactivity: a leading cause of disease and disability",
+  "source26_text": "Physical inactivity a leading cause of disease and disability, warns WHO",
   "source26_url": "https://www.who.int/news/item/04-04-2002-physical-inactivity-a-leading-cause-of-disease-and-disability-warns-who"
 } 
